@@ -1,0 +1,50 @@
+/*
+section + p -- le premier p après section fini
+section ~ p -- tous les p après section fini appartenant au même parent
+li:first-child
+li:last-child
+*/
+
+
+
+
+body{
+	background-color: #eee;
+	color: dimgray;
+	font-family: arial;
+}
+
+header, footer{
+	background-color: #363636;
+	color: white;
+}
+
+bold{
+	background-color: #81b600;
+	color : white;
+	border-radius: 3px;
+}
+
+blockquote{
+	font-size: 1.5em;
+	text-align: center;
+}
+
+article{
+	background-color: white;
+	border: 0.15rem solid #CCC;
+	border-radius: 0.2rem;
+	margin: 1rem;
+}
+
+li{
+	list-style: none;
+}
+
+a{
+	color: #81b600;
+}
+
+a:hover{
+	text-decoration: none;
+}

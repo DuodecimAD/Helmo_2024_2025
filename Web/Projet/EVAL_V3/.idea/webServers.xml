@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dc0964d0-5655-41aa-96d3-9d1266f4d847" name="HELmo Panoramix" url="http://192.168.132.203">
+        <fileTransfer rootFolder="/public_html" host="192.168.132.203" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="0364a0dc-eaef-40a3-a8ec-77ad87b98fa3" name="localhost" url="http://localhost">
+        <fileTransfer mountedRoot="E:\OneDrive - student.helmo.be\Helmo\DevApp\Bloc1\2024-2025\Web\Projet\EVAL_V2" accessType="MOUNT" port="0" />
+      </webServer>
+    </option>
+  </component>
+</project>

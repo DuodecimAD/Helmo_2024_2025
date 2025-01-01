@@ -1,0 +1,60 @@
+/* Icônes étoile */
+.stars .material-icons {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+h1{
+	color: steelblue;
+	text-align: center;
+	font-family: calibri;
+}
+
+h2{
+	text-align: center;
+}
+
+main section{
+	width: 300px;
+	padding: 15px;
+	margin: auto;
+	border: 2px solid #008CBA;
+	border-radius: 6px;
+	box-shadow: 0px 0px 20px -10px black;
+	background-color: #f0f8ff;
+	font-family: calibri;
+}
+
+section a{
+	padding: 10px;
+	background-color: steelblue;
+	color: white;
+	border-radius: 6px;
+	margin: 10px auto;
+	width: 100px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+section a:hover{
+	background-color: #005f6b;
+}
+
+section ul{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+section li{
+	width: 46%;
+	padding: 2%;
+	list-style-type: none;
+	display: inline-block;
+}
+
+li:nth-child(2){
+	text-align: right;
+}
+

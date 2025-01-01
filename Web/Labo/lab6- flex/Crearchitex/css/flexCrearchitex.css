@@ -1,0 +1,139 @@
+body{
+	background-color: #eee;
+	font-family: tahoma;
+	margin: 0;
+	font-size: 0.7em;
+}
+
+header{
+	background-color: black;
+	padding: 0.3rem 1rem;
+	
+}
+
+header div{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 50rem;
+	margin: auto;
+}
+
+header img{
+	width: 6.5rem;
+}
+
+
+nav ul{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin: 0;
+}
+
+nav a{
+	color: white;
+	text-decoration: none;
+	margin: 0rem 1rem;
+}
+
+#current{
+	text-decoration: overline;
+	text-decoration-color: limegreen;
+	text-decoration-thickness: 2px;
+}
+
+main{
+	color: dimgrey;
+	width: 50rem;
+	margin: auto;
+}
+
+section:first-child img{
+	width: 37.5rem;
+	display: block;
+	margin: auto;
+}
+
+section blockquote{
+	text-align: center;
+	font-size: 1.3em;
+	line-height: 1.5em;
+}
+
+section blockquote span{
+	background-color: limegreen;
+	color: white;
+	padding: 0.19rem 0.32rem;
+	border-radius: 0.125rem;
+}
+
+section:first-child li br{
+	display: none;
+}
+
+section:first-child ul{
+	list-style: none;
+	display: inline-block;
+	padding-left: 0.625rem;
+}
+
+section:first-child li{
+	padding: 0.7rem 0;
+	border-bottom: 1px solid lightgrey;
+}
+
+section:first-child li span{
+	background-color: limegreen;
+	color: white;
+	padding: 0.125rem 0.19rem;
+	border-radius: 0.125rem;
+	margin-right: 0.625rem;
+	width: 6.25rem;
+	display: inline-block;
+	text-align: center;
+
+}
+
+section:nth-child(2){
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	flex-direction: row;
+}
+
+section:nth-child(2) h2{
+	flex: none;
+	width: 100%;
+}
+
+section:nth-child(2) article{
+	border: lightgrey solid 2px;
+	background-color: white;
+	padding: 0.5rem;
+	margin: 0.625rem 0;
+	flex-basis: calc(100% / 5);
+	border-radius: 2px;
+}
+
+section:nth-child(2) article img{
+	width: 100%;
+}
+
+footer{
+	background-color: black;
+	padding: 1rem;
+	color: white;
+
+}
+
+footer > div {
+	width: 46.875rem;
+	display: flex;
+	justify-content: space-between;
+	margin: auto;
+}
+
+footer a{
+	color: limegreen;
+}

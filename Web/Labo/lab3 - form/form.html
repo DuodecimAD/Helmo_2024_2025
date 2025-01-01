@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>Création de votre compte</h1>
+	<form action="#" method="post">
+		<fieldset>
+			<legend>Vos coordonnées</legend>
+			<label for="nom">votre nom : </label>
+			<input type="text" name="nom" required placeholder="Entrez votre prénom" value="" disabled>
+		</fieldset>
+
+		<label for="status">Status </label>
+		<input type="text" name="statut" readonly value="NOUVEAU">
+
+		<label for="message">Message </label>
+		<textarea name="message" rows="10" cols="20" autofocus></textarea>
+
+		<label for="sexe">Sexe </label>
+		<label class="radio"><input type="radio" name="sexe" value="femme">Femme</label>
+		<label class="radio"><input type="radio" name="sexe" value="homme">Homme</label>
+		<label class="radio"><input type="radio" name="sexe" value="autre">Autre</label>
+
+		<label for="plaque">Voiture </label>
+		<input type="text" name="plaque" pattern="^\d-[A-Z]{3}\d{3}$">
+
+		<label for="cat1">Catégories</label>
+		<label for="cat1">Vêtements</label>
+		<input type="checkbox" name="cat[]"value="cat1">
+		<label for="cat2">Livres</label>
+		<input type="checkbox" name="cat[]"value="cat2">
+		<label for="cat3">Bandes dessinées</label>
+		<input type="checkbox" name="cat[]"value="cat3">
+		<label for="cat3">Jeux</label>
+		<input type="checkbox" name="cat[]"value="cat4">
+
+		<label for="livraison">Mode de livraison</label>
+		<select	name="livraison">
+			<option value="D">A domicile</option>
+			<option value="M">Au magasin</option>
+			<option value="P">Au point relais</option>
+		</select>
+
+		<input type="submit" name="buttsub1" value="valider">
+		<button type="submit" name="buttsub1"><u>Autre valider</u></button>
+
+		<input type="reset" name="reset1" value="Réinitialiser">
+		<button	type="reset" name="reset1"><u>Autre Réinitialiser</u></button>
+
+		<input type="button" name="button1" value="Buzzer">
+		<button	type="button" name="button1"><u>Autre Buzzer</u></button>
+
+		<input	type="file" name="avatar" accept="image/*, .jpg, .png">
+
+	</form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+/* Icônes étoile */
+.stars .material-icons {
+    font-size: 1.2rem;
+    color: #FFD700;
+}
+
+h1{
+	color: steelblue;
+	text-align: center;
+	font-family: calibri;
+}
+
+h2{
+	text-align: center;
+	margin: 0;
+}
+
+main section{
+	width: 250px;
+	margin: auto;
+	padding-bottom: 5px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px -5px black;
+	background-color: #f0f8ff;
+	font-family: calibri;
+}
+
+header{
+	background-color: steelblue;
+	color: white;
+	padding: 15px 0;
+	text-align: center;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+section a{
+	padding: 7px;
+	background-color: orangered;
+	color: white;
+	border-radius: 4px;
+	margin: 10px auto;
+	width: 150px;
+	display: block;
+	text-align: center;
+	text-decoration: none;
+}
+
+section p{
+	margin: 0;
+}
+
+section a:hover{
+	background-color: #005f6b;
+}
+
+section ul{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+section li{
+	/*padding: 2%;*/
+	list-style-type: none;
+}
+
+header + ul li:first-child{
+	text-decoration: line-through;
+	color: grey;
+	font-size: 1.2em;
+}
+
+header + ul{
+	width: 125px;
+	margin: auto;
+}
+
+header + ul li:nth-child(2){
+	text-align: right;
+	color: orangered;
+	font-size: 2em;
+}
+
+header + ul li{
+	display: inline-block;
+	padding: 25px 10px;
+}
+
+ul + ul{
+	/*background-color: red;*/
+	width: 80%;
+	margin: auto;
+
+}
+
+ul + ul li{
+	padding: 10px 0 10px 40px;
+	line-height: 2em;
+
+}
+
+ul + ul li::before{
+	content: "✅ ";
+
+}
+
+ul + ul li::after{
+	content: "";
+	border-bottom: 1px solid lightgrey;
+	display: block;
+}
