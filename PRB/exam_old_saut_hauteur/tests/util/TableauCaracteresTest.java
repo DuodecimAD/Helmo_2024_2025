@@ -21,7 +21,6 @@ class TableauCaracteresTest {
 		assertArrayEquals(expected, TableauCaracteres.ajouterLigne(old, newLine));
 	}
 
-	// Pas à faire, fait pour le fun car dans les temps
 	@Test
 	void enUneDimensionTest() {
 		char[][] old = { {'X', 'X', 'O'}, {'O'},  {'X', 'X'} };
@@ -29,9 +28,16 @@ class TableauCaracteresTest {
 		assertArrayEquals(expected, TableauCaracteres.enUneDimension(old));
 	}
 	
-	// Pas à faire, fait pour le fun car dans les temps
 	@Test
 	void dernierePositionDeTest() {
+		char[] old = { 'X', 'X', 'O', 'O', 'X', 'X' };
+		char rechercheChar = 'O';
+		int expected = 3;
+		assertEquals(expected, TableauCaracteres.dernierePositionDe(old,rechercheChar));
+	}
+	
+	@Test
+	void dernierePositionDeTestPas() {
 		char[] old = { 'X', 'X', 'O', 'O', 'X', 'X' };
 		char rechercheChar = 'O';
 		int expected = 3;

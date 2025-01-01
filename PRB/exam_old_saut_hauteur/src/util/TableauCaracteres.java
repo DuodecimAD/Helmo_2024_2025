@@ -81,19 +81,14 @@ public class TableauCaracteres {
 	public static int dernierePositionDe(char[] t, char valeur) {
 		int index = 0;
 		
-		for (int i = 0; i < t.length; i++) {
+		for (int i = t.length-1; i >= 0; i--) {
 			if(t[i] == valeur) {
-				index = i;
+				return i;
 			}
 		}
-		
-		if(index != 0) {
-			return index;
-		} else {
-			return -1;
-		}
-		
-		
+
+		return -1;
+
 	}
 
 
