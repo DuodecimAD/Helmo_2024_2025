@@ -17,7 +17,6 @@ public class SautHauteur {
 		String hauteurSaut, sautReussi = "";
 		int lastHauteur = 0;
 		
-
 		// Tableaux
 		int[] hauteurs = {};
 		char[][] resultsPourHauteur = {};
