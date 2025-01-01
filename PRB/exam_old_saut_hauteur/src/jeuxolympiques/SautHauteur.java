@@ -84,7 +84,6 @@ public class SautHauteur {
 			
 			resultsPourHauteur[hauteurs.length-1] = TableauCaracteres.ajouterElement(resultsPourHauteur[hauteurs.length-1], sautReussi.charAt(0));		
 			
-			
 			// Affichage
 			afficherSauts(hauteurs, resultsPourHauteur);
 			
