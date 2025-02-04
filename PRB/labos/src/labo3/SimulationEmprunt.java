@@ -8,7 +8,7 @@ import io.Console;
 public class SimulationEmprunt {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 		// Variables
 		double capital;

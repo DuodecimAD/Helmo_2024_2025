@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="AoC_2024/src"/>
+	<classpathentry kind="src" path="peerat.dev/src"/>
+	<classpathentry kind="src" path="PRB/evals/src"/>
+	<classpathentry kind="src" path="PRB/evals/tests"/>
+	<classpathentry kind="src" path="PRB/exam_old_jeux_societe/src"/>
+	<classpathentry kind="src" path="PRB/exam_old_jeux_societe/tests"/>
+	<classpathentry kind="src" path="PRB/exam_old_kanban/src"/>
+	<classpathentry kind="src" path="PRB/exam_old_kanban/tests"/>
+	<classpathentry kind="src" path="PRB/exam_old_saut_hauteur/src"/>
+	<classpathentry kind="src" path="PRB/exam_old_saut_hauteur/tests"/>
+	<classpathentry kind="src" path="PRB/exam_old_shifumi/src"/>
+	<classpathentry kind="src" path="PRB/exam_old_shifumi/tests"/>
+	<classpathentry kind="src" path="PRB/exam_Q1/src"/>
+	<classpathentry kind="src" path="PRB/exam_Q1/tests"/>
+	<classpathentry kind="src" path="PRB/labos/src"/>
+	<classpathentry kind="src" path="PRB/labos/tests"/>
+	<classpathentry kind="src" path="PRB/theorie/src"/>
+	<classpathentry kind="src" path="PRB/theorie/tests"/>
+	<classpathentry kind="lib" path="Archi/Mars4_5.jar"/>
+	<classpathentry kind="output" path="AoC_2024/bin"/>
+</classpath>

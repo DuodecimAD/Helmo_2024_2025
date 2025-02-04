@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class day9 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		//part1();
 		//part1ForReal();
 		
@@ -34,7 +34,7 @@ public class day9 {
 		try {
 			string = Files.readString(file);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 
@@ -110,7 +110,7 @@ public class day9 {
 		try {
 			string = Files.readString(file);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 

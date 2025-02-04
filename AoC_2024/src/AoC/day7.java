@@ -8,7 +8,7 @@ import io.Fichier;
 public class day7 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		//part1();
 		//part2();
 		part2ForReal();
