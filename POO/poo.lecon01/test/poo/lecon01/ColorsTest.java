@@ -2,8 +2,6 @@ package poo.lecon01;
 
 import org.junit.jupiter.api.Test;
 
-import poo.lecon01.Colors;
-
 import static org.junit.jupiter.api.Assertions.*;
 
 class ColorsTest {
@@ -19,13 +17,13 @@ class ColorsTest {
 
     @Test
     public void lightnessForGreyIs_50_Percent() {
-    	//TODO : exercice 1
+    	//DONE : exercice 1
         assertEquals(0.5f, Colors.getLightness(128, 128, 128), Colors.TOLERANCE);
     }
 
     @Test
     public void ligthnessForOliveIs_25_Percent() {
-        //TODO : exercice 1
+        //DONE : exercice 1
         assertEquals(0.25f, Colors.getLightness(128, 128, 0), Colors.TOLERANCE);
     }
 
@@ -40,7 +38,7 @@ class ColorsTest {
     }
 
 
-    //TODO : exercice 3
+    //DONE : exercice 3
     
     @Test
     public void SaturationIs_0() {
@@ -59,7 +57,7 @@ class ColorsTest {
         assertEquals(0.904f, Colors.getSaturation(217, 11, 67), Colors.TOLERANCE);
     }
     
-    //TODO: exercice 4 tests
+    //DONE: exercice 4 tests
     @Test
     public void toHSL_test() {
     	assertArrayEquals(new float[]{0.0f, 0.0f, 0.0f}, Colors.toHSL(0, 0, 0), Colors.TOLERANCE);
@@ -67,7 +65,7 @@ class ColorsTest {
     	assertArrayEquals(new float[]{0.0f, 0.0f, 0.9999f}, Colors.toHSL(255, 255, 255), Colors.TOLERANCE);
     }
     
-    //TODO : exercice 5, ajouter les tests
+    //DONE : exercice 5, ajouter les tests
     @Test
     public void complementaryColor_test() {
     	
@@ -84,7 +82,7 @@ class ColorsTest {
     	assertArrayEquals(new float[]{164.0f, 0.904f, 0.447f}, test3, Colors.TOLERANCE);
     }
     
-    // TODO : exercice 7 tests
+    // DONE : exercice 7 tests
     @Test
     public void inRange_test() {
     	assertEquals(0, Colors.inRange(0));
