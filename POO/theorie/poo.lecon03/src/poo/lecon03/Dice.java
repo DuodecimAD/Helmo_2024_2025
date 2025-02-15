@@ -1,7 +1,7 @@
 package poo.lecon03;
 
 public class Dice {
-	//TODO : exercice 01
+	//TODO : exercice 01-03
 	int facesCount;
 	int topFace;
 	
@@ -36,5 +36,10 @@ public class Dice {
 	
 	public int getTopFace() {
 		return topFace;
+	}
+	
+	// TODO : exercice 06
+	public String toString() {
+		return "Dice(facesCount: "+ getFacesCount() +", topFace: "+ getTopFace() +")";
 	}
 }

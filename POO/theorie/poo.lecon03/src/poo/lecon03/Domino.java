@@ -1,16 +1,20 @@
 package poo.lecon03;
 
 public class Domino {
-	// TODO exercice 02
+	// TODO exercice 02-04
 	int group1;
 	int group2;
 
 	public Domino(int spots1, int spots2) {
-		if ((spots1 >= 0 && spots1 <= 6) && (spots2 >= 0 && spots2 <= 6)) {
+		if (spots1 >= 0 && spots1 <= 6) {
 			group1 = spots1;
-			group2 = spots2;
 		} else {
 			group1 = (int) (Math.random() * 7);
+		}
+		
+		if (spots2 >= 0 && spots2 <= 6) {
+			group2 = spots2;
+		} else {
 			group2 = (int) (Math.random() * 7);
 		}
 	}
@@ -44,4 +48,16 @@ public class Domino {
 			return false;
 		}
 	}
+	public String toString() {
+		if(getSpotsAt(0) == 0 && getSpotsAt(1) == 0) {
+			return "Domino(spots 1: None, spots 2: None)";
+		} else if(getSpotsAt(0) == 0) {
+			return "Domino(spots 1: None, spots 2: "+ getSpotsAt(1) +")";
+		} else if(getSpotsAt(1) == 0) {
+			return "Domino(spots 1: "+ getSpotsAt(0) +", spots 2: None)";
+		}
+		
+		return "Domino(spots 1: "+ getSpotsAt(0) +", spots 2: "+ getSpotsAt(1) +")";
+	}
+	
 }

@@ -1,4 +1,6 @@
 .metadata/
 bin/
+tests-bin/
 *.xlsx
 *.docx
+*.class
