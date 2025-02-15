@@ -26,6 +26,7 @@ public class ColorPaletteGenerator {
 		} else {
 			couleurs[nbr-1] = BLACK;
 		}
+		
 		return couleurs;
 	}
 
