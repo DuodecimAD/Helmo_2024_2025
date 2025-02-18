@@ -10,9 +10,9 @@ public class ColorTest {
 		Color color = new Color(0,128,255);
 //		color.init(0,128,255);
 		
-		assertEquals(0, color.getRed());
-		assertEquals(128, color.getGreen());
-		assertEquals(255, color.getBlue());
+		assertEquals(0, color.getR());
+		assertEquals(128, color.getG());
+		assertEquals(255, color.getB());
 //		fail("Décommente-moi");
 	}
 	
@@ -21,9 +21,9 @@ public class ColorTest {
 		Color color = new Color(-1, -1, -1);
 //		color.init(-1, -1, -1);
 		
-		assertEquals(0, color.getRed());
-		assertEquals(0, color.getGreen());
-		assertEquals(0, color.getBlue());
+		assertEquals(0, color.getR());
+		assertEquals(0, color.getG());
+		assertEquals(0, color.getB());
 //		fail("Décommente-moi");
 	}
 	
@@ -32,9 +32,9 @@ public class ColorTest {
 		Color color = new Color(256, 256, 256);
 //		color.init(256, 256, 256);
 		
-		assertEquals(255, color.getRed());
-		assertEquals(255, color.getGreen());
-		assertEquals(255, color.getBlue());
+		assertEquals(255, color.getR());
+		assertEquals(255, color.getG());
+		assertEquals(255, color.getB());
 //		fail("Décommente-moi");
 	}
 	

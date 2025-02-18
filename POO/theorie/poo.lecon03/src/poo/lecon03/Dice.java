@@ -1,9 +1,10 @@
 package poo.lecon03;
 
 public class Dice {
-	//TODO : exercice 01-03
-	int facesCount;
-	int topFace;
+	//DONE : exercice 01-03
+	//DONE : exercice 12.1
+	private int facesCount;
+	private int topFace;
 	
 	public Dice(int n) {
 		if (n > 6 || n < 2) {
@@ -38,7 +39,16 @@ public class Dice {
 		return topFace;
 	}
 	
-	// TODO : exercice 06
+	public void setFacesCount(int facesCount) {
+		this.facesCount = facesCount;
+	}
+
+	public void setTopFace(int topFace) {
+		this.topFace = topFace;
+	}
+
+	
+	// DONE : exercice 06
 	public String toString() {
 		return "Dice(facesCount: "+ getFacesCount() +", topFace: "+ getTopFace() +")";
 	}
