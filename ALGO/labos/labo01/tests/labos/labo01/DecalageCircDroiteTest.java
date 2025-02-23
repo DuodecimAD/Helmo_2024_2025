@@ -35,6 +35,7 @@ class DecalageCircDroiteTest {
 	void decalageCircDroite_casLimitetest() {
 		int[] depart = new int[]{};
 		int[] attendu = new int[]{};
+		DecalageCircDroite.decalageCircDroite(depart);
 		assertArrayEquals(attendu, depart);
 	}
 	
@@ -42,6 +43,7 @@ class DecalageCircDroiteTest {
 	void decalageCircDroite_combinaisonCastest() {
 		int[] depart = new int[]{1,2};
 		int[] attendu = new int[]{2,1};
+		DecalageCircDroite.decalageCircDroite(depart);
 		assertArrayEquals(attendu, depart);
 		
 	}

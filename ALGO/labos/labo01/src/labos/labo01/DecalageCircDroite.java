@@ -11,14 +11,17 @@ public class DecalageCircDroite {
 	
 	public static void decalageCircDroite(int[] valeurs) {
 		Objects.requireNonNull(valeurs, "Le tableau ne doit pas être null");
-		int pos = valeurs.length-1;
-		int tmp = valeurs[valeurs.length-1];
 		
-		while(pos > 0) {
-			valeurs[pos] = valeurs[pos-1];
-			pos--;
+		if(valeurs.length > 0) {
+			int pos = valeurs.length-1;
+			int tmp = valeurs[valeurs.length-1];
+			
+			while(pos > 0) {
+				valeurs[pos] = valeurs[pos-1];
+				pos--;
+			}
+			valeurs[0] = tmp;
 		}
-		valeurs[0] = tmp;
 	}
 
 }

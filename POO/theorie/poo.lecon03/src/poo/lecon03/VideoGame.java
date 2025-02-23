@@ -1,7 +1,7 @@
 package poo.lecon03;
 
 public class VideoGame {
-	//TODO exercice 17
+	//DONE exercice 17
 	private String nom;
 	private PEGIAge age;
 	
@@ -10,20 +10,27 @@ public class VideoGame {
 		this.age = a;
 	}
 
-	public String getNom() {
+	public String getName() {
 		return nom;
 	}
 
-	public PEGIAge getAge() {
+	public PEGIAge getPegiAge() {
 		return age;
 	}
 	
-	public boolean isAgePEGI(int a) {
+	public void setPEGIAge(PEGIAge age) {
+		if(age != null) {
+			this.age = age;
+		}
+		
+	}
+
+	public boolean isAllowed(int a) {
 		return age.isAllowed(a);
 	}
 	
 	public String toString() {
-		return "nom : " + this.nom + ", age : " + this.age;
+		return "VideoGame(name: " + this.nom + ", PEGI: " + this.age +")";
 	}
 	
 	public boolean equals(Object o) {
@@ -35,6 +42,6 @@ public class VideoGame {
 			return false;
 		}
 		
-		return nom == toVideoGame.nom && age == toVideoGame.age;
+		return nom.equals(toVideoGame.nom);
 	}
 }
