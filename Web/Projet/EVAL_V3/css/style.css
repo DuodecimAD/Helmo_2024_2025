@@ -239,12 +239,13 @@ article{
 }
 
 #inscription_form {
-    max-width: 53.36rem;
-    padding: 1.333rem 6.67rem 3.335rem;
+    max-width: 45.36rem;
+    padding: 1.333rem 3.67rem 3.335rem;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 10px;
 }
 
 #contact_form label, #inscription_form label {
@@ -268,42 +269,53 @@ article{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 1.333rem;
+    margin-top: 0.5rem;
+}
+
+#inscription_form div div{
+
+    margin-top: 0;
 }
 
 #inscription_form div:nth-child(1) {
-    flex-basis: 24%;
-    justify-content: flex-end;
-    order: 2;
+    flex-basis: 50%;
 }
 
-#inscription_form div:nth-child(1) a {
+#inscription_form div:nth-child(2) {
+    flex-basis: 48%;
+}
+
+#inscription_form #previewAvatar {
+    margin: auto;
+}
+
+#inscription_form #avatar {
+    width: 200px;
+}
+
+#inscription_form div:nth-child(2) a {
     all: unset;
     text-decoration: underline;
     display: block;
     margin: 0 auto;
 }
 
-#inscription_form div:nth-child(1) a:nth-child(2):hover {
+#inscription_form div:nth-child(2) a:nth-child(2):hover {
     all: unset;
     margin: 0 auto;
     cursor: pointer;
 }
 
-#inscription_form div:nth-child(1) img {
+#inscription_form div:nth-child(2) img:hover {
     cursor: pointer;
 }
 
-#inscription_form div:nth-child(2) {
-    flex-basis: 54%;
-    order: 1;
-}
+
 
 #inscription_form div:nth-child(3) {
-    flex-basis: 85%;
+    flex-basis: 100%;
     flex-direction: row;
     justify-content: center;
-    order: 3;
 }
 
 #inscription_form div:nth-child(3) div {
@@ -314,7 +326,7 @@ article{
 }
 
 #inscription_form div:nth-child(4) {
-    order: 4;
+
 }
 
 #inscription_form div:nth-child(4) label {

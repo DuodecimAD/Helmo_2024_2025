@@ -1,0 +1,54 @@
+SELECT CASE
+          WHEN (SELECT COUNT(*) FROM ALERTER) = 72 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "ALERTER" ,
+       CASE
+          WHEN (SELECT COUNT(*) FROM BIEN) = 30 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "BIEN",
+       CASE
+          WHEN (SELECT COUNT(*) FROM CANDIDAT) = 20 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "CANDIDAT",
+       CASE
+          WHEN (SELECT COUNT(*) FROM CATEGORIE_BIEN) = 10 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "CATEGORIE_BIEN",       
+      CASE
+          WHEN (SELECT COUNT(*) FROM CATEGORIE_CUISINE) = 5 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "CATEGORIE_CUISINE",        
+       CASE
+          WHEN (SELECT COUNT(*) FROM CATEGORIE_ETAT) = 5 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "CATEGORIE_ETAT",     
+       CASE
+          WHEN (SELECT COUNT(*) FROM CATEGORIE_SITUATION) = 11 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "CATEGORIE_SITUATION",
+       CASE
+          WHEN (SELECT COUNT(*) FROM CLIENT) = 25 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "CLIENT",  
+       CASE
+          WHEN (SELECT COUNT(*) FROM GERER) = 37 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "GERER",  
+       CASE
+          WHEN (SELECT COUNT(*) FROM HISTORIQUE_PRIX) = 34 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "HISTORIQUE_PRIX",
+      CASE
+          WHEN (SELECT COUNT(*) FROM MESSAGE) = 30 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "MESSAGE",      
+       CASE
+          WHEN (SELECT COUNT(*) FROM OFFRE) = 20 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "OFFRE",  
+      CASE
+          WHEN (SELECT COUNT(*) FROM VENDEUR) = 11 THEN 'OK'
+          ELSE '*** NOT OK ***'
+       END AS "VENDEUR"
+       
+FROM DUAL

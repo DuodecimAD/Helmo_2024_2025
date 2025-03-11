@@ -85,4 +85,18 @@ public class BottleTest {
 		assertEquals(25, beerBottle.getVolume());
 		assertEquals(20, clone.getVolume());
 	}
+	
+	@Test
+	void initWithTwoArgs() {
+		// code du prof, erreurs ...
+		Bottle overflowed = new Bottle(25, 26);
+		
+		assertEquals(25, overflowed.getCapacity());
+		assertEquals(25, overflowed.getVolume());
+		
+		Bottle underflowed = new Bottle(-10, 5);
+		
+		assertEquals(5, underflowed.getCapacity());
+		assertEquals(10, underflowed.getVolume());
+	}
 }

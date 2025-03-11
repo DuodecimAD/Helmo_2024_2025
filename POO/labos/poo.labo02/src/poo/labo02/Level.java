@@ -6,16 +6,36 @@ package poo.labo02;
  * Vous ne pouvez pas créer de nouveaux objets avec cette classe.
  * Vous pouvez par contre utiliser les objets prédéfinis tels que Level.STUDENT, Level.HEADMASTER, etc.
  * */
-public class Level {
-	public static final Level HEADMASTER = new Level(1, "Headmaster");
-	public static final Level PROFESSOR = new Level(3, "Professor");
-	public static final Level GRADUATED = new Level(5, "Graduated");
-	public static final Level STUDENT = new Level(7, "Student");
+public enum Level {
+	HEADMASTER(1, "Headmaster"){
+		@Override
+		public Level next() {
+			return HEADMASTER;
+		}
+	},
+	PROFESSOR(3, "Professor"){
+		@Override
+		public Level next() {
+			return HEADMASTER;
+		}
+	},
+	GRADUATED(5, "Graduated"){
+		@Override
+		public Level next() {
+			return PROFESSOR;
+		}
+	},
+	STUDENT(7, "Student"){
+		@Override
+		public Level next() {
+			return GRADUATED;
+		}
+	};
 	
 	private final int time;
 	private final String name;
 	
-	private Level(int time, String name) {
+	Level(int time, String name) {
 		this.time = time;
 		this.name = name;
 	}
@@ -32,19 +52,6 @@ public class Level {
 	 * */
 	public String getName() {
 		return this.name;
-	}
-	
-	/**
-	 * Détermine si cet objet est équivalent à l'objet <code>other</code>.
-	 * {@inheritDoc}
-	 * */
-	public boolean equals(Object other) {
-		//Comme les objets sont prédéfinis, on peut utiliser la comparaison par référence.
-		if(!(other instanceof Level)) {
-			return false;
-		}
-		
-		return this == other; 
 	}
 	
 	/**
@@ -65,13 +72,6 @@ public class Level {
 	 * <li>Le niveau suivant professeur et directeur est le niveau directeur.
 	 * </ul>
 	 * */
-	public Level next() {
-		if(this == STUDENT) {
-			return GRADUATED;
-		} else if(this == GRADUATED) {
-			return PROFESSOR;
-		} else {
-			return HEADMASTER;
-		}
-	}
+	public abstract Level next();
+	
 }

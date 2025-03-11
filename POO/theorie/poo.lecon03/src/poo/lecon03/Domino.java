@@ -12,7 +12,7 @@ public class Domino {
 		} else {
 			group1 = (int) (Math.random() * 7);
 		}
-		
+
 		if (spots2 >= 0 && spots2 <= 6) {
 			group2 = spots2;
 		} else {
@@ -30,13 +30,11 @@ public class Domino {
 //		}
 //
 //	}
-	
-	
 
 	public int getSpotsAt(int pos) {
 		if (pos == 0) {
 			return group1;
-		} else if (pos == 1){
+		} else if (pos == 1) {
 			return group2;
 		} else {
 			return -1;
@@ -67,31 +65,31 @@ public class Domino {
 			return false;
 		}
 	}
-	
+
 	// DONE exercice 07
 	public String toString() {
-		if(getSpotsAt(0) == 0 && getSpotsAt(1) == 0) {
+		if (getSpotsAt(0) == 0 && getSpotsAt(1) == 0) {
 			return "Domino(spots 1: None, spots 2: None)";
-		} else if(getSpotsAt(0) == 0) {
-			return "Domino(spots 1: None, spots 2: "+ getSpotsAt(1) +")";
-		} else if(getSpotsAt(1) == 0) {
-			return "Domino(spots 1: "+ getSpotsAt(0) +", spots 2: None)";
+		} else if (getSpotsAt(0) == 0) {
+			return "Domino(spots 1: None, spots 2: " + getSpotsAt(1) + ")";
+		} else if (getSpotsAt(1) == 0) {
+			return "Domino(spots 1: " + getSpotsAt(0) + ", spots 2: None)";
 		}
-		
-		return "Domino(spots 1: "+ getSpotsAt(0) +", spots 2: "+ getSpotsAt(1) +")";
+
+		return "Domino(spots 1: " + getSpotsAt(0) + ", spots 2: " + getSpotsAt(1) + ")";
 	}
-	
+
 	// DONE exercice 10
 	public boolean equals(Object o) {
-		if(this == o) {
+		if (this == o) {
 			return true;
 		}
-		
-        if(!(o instanceof Domino toDomino)) {
+
+		if (!(o instanceof Domino toDomino)) {
 			return false;
 		}
-		
+
 		return group1 == toDomino.group1 && group2 == toDomino.group2;
 	}
-	
+
 }

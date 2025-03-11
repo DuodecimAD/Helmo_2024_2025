@@ -4,16 +4,15 @@ public class Dice {
 	private int facesCount;
 	private int topFace;
 	
-	public Dice(int n) {
-		facesCount = (2 <= n && n <= 6) ? n : 6;
+	public Dice(int facesCount) {
+		this(facesCount, 1);
 		roll();	
 	}
 	
-//	public void init(int n) {
-//		facesCount = (2 <= n && n <= 6) ? n : 6;
-//		roll();
-//		
-//	}
+	public Dice(int facesCount, int topFace) {
+		this.facesCount = (2 <= facesCount && facesCount <= 6) ? facesCount : 6;
+		this.topFace = Math.max(1, Math.min(topFace,  this.facesCount));
+	}
 
 	public int getFacesCount() {
 		return facesCount;

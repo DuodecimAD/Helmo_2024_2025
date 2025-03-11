@@ -11,27 +11,29 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.StringJoiner;
 
 public class day11 {
 
 	public static void main(String[] args) {
 		
 		//part1();
-		part2();
+		//part2();
+		part2AfterSomeHelmoPooClasses();
 
 	}
 	
 	public static void part1() {
 		
-		List<Integer> start = Arrays.asList(125,17);
 		
-		ArrayList<Integer> a = new ArrayList<Integer>(start);
+		
+		ArrayList<Long> a = new ArrayList<>(Arrays.asList(3279L, 998884L, 1832781L, 517L, 8L, 18864L, 28L, 0L));
 		
 		//System.out.println(a);
 		
-		for (int i = 0; i < 25; i++) {
-			
-			ArrayList<Integer> b = new ArrayList<Integer>();
+		for (int i = 0; i < 75; i++) {
+			long startTime = System.nanoTime();
+			ArrayList<Long> b = new ArrayList<Long>();
 			
 			for (int j = 0; j < a.size(); j++) {
 				
@@ -40,12 +42,10 @@ public class day11 {
 				int middle = length / 2;
 				
 				if (a.get(j) == 0) {
-					b.add(1);
-				} else if (a.get(j) == 1) {
-					b.add(a.get(j) * 2024);
+					b.add(1L);
 				} else if (length % 2 == 0) {
-					b.add(Integer.parseInt(numberStr.substring(0, middle)));
-					b.add(Integer.parseInt(numberStr.substring(middle)));
+					b.add(Long.parseLong(numberStr.substring(0, middle)));
+					b.add(Long.parseLong(numberStr.substring(middle)));
 				} else if (length % 2 == 1) {
 					b.add(a.get(j) * 2024);
 				} else {
@@ -55,7 +55,10 @@ public class day11 {
 			}
 			//System.out.println(b);
 			a = b;
-			System.out.println(i+1 + " " + a.size());
+			System.out.println(i + "size : " + a.size());
+			long endTime = System.nanoTime(); 
+	        long duration = (endTime - startTime) / 1000000;
+	        System.out.println("Duration : " + duration/1000.00 + " sec ");
 		}
 		
 	}
@@ -151,6 +154,48 @@ public class day11 {
 		    e.printStackTrace();
 		}
 
+
+	}
+	
+	// still sucks
+	public static void part2AfterSomeHelmoPooClasses() {
+		
+		String[] array = new String[] {"3279", "998884", "1832781", "517", "8", "18864", "28", "0"};
+		
+		StringJoiner arrayJoiner = new StringJoiner(" ");
+
+		
+		for (int i = 0; i < 75; i++) {
+			int counter = 0;
+			long startTime = System.nanoTime();
+						
+			for (int j = 0; j < array.length; j++) {
+
+				if (array[j].equals("0")) {
+					arrayJoiner.add("1");
+					counter++;
+				} else if (array[j].length() % 2 == 1) {
+					arrayJoiner.add(String.valueOf(Long.parseLong(array[j]) * 2024));
+					counter++;
+				} else if (array[j].length() % 2 == 0) {
+					arrayJoiner.add(String.valueOf(Long.parseLong(array[j].substring(0, array[j].length()/2))));
+					arrayJoiner.add(String.valueOf(Long.parseLong(array[j].substring(array[j].length()/2))));
+					counter+=2;
+				} else {
+					System.out.println("Error");
+				}
+				
+			}
+
+			//System.out.println(arrayJoiner.toString());
+			System.out.println(i + " size : " + counter);
+			array = Arrays.copyOf(arrayJoiner.toString().split(" "), arrayJoiner.toString().split(" ").length);
+			arrayJoiner = new StringJoiner(" ");
+			
+			long endTime = System.nanoTime(); 
+	        long duration = (endTime - startTime) / 1000000;
+	        System.out.println("Duration : " + duration/1000.00 + " sec ");
+		}
 
 	}
 

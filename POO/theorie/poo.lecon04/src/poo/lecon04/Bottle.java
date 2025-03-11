@@ -7,9 +7,15 @@ public class Bottle {
 	private int[] volumeCapacity;
 
 	public Bottle(int capacity) {
-		volumeCapacity = new int[] {
-			0, capacity
+		this(0, capacity);
+	}
+	
+	public Bottle(int volume, int capacity) {
+		
+		this.volumeCapacity = new int[] {
+				Math.min(volume >= 0 ? volume : Math.abs(volume), capacity >= 0 ? capacity : Math.abs(capacity)), capacity >= 0 ? capacity : Math.abs(capacity)
 		};
+		
 	}
 	
 	//DONE: exercice 2

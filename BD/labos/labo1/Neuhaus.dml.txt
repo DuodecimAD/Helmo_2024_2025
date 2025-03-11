@@ -1,0 +1,370 @@
+DELETE FROM ALERTER;
+DELETE FROM MESSAGE;
+DELETE FROM GERER;
+DELETE FROM VENDEUR;
+DELETE FROM HISTORIQUE_PRIX;
+DELETE FROM OFFRE;
+DELETE FROM CANDIDAT;
+DELETE FROM BIEN;
+DELETE FROM CLIENT;
+DELETE FROM CATEGORIE_BIEN;
+DELETE FROM CATEGORIE_CUISINE;
+DELETE FROM CATEGORIE_ETAT;
+DELETE FROM CATEGORIE_SITUATION;
+
+
+--------------------------------------------------------
+--  Fichier créé - mercredi-novembre-04-2020   
+--------------------------------------------------------
+REM INSERTING into CATEGORIE_BIEN
+
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('1','Château','A');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('2','Bien exceptionnel','A');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('3','Maison de maître','B');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('4','Ferme','B');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('5','Villa','C');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('6','Bungalow','C');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('7','Fermette','C');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('8','Maison','D');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('9','Maison bel-étage','D');
+Insert into CATEGORIE_BIEN (ID_CATBIEN,DESCRIPTION,CODE) values ('10','Appartement','E');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into CATEGORIE_CUISINE
+
+Insert into CATEGORIE_CUISINE (ID_CATCUISINE,DESCRIPTION,CODE) values ('1','Américaine hyperéquipée','A');
+Insert into CATEGORIE_CUISINE (ID_CATCUISINE,DESCRIPTION,CODE) values ('2','Hyperéquipée','B');
+Insert into CATEGORIE_CUISINE (ID_CATCUISINE,DESCRIPTION,CODE) values ('3','Equipée','C');
+Insert into CATEGORIE_CUISINE (ID_CATCUISINE,DESCRIPTION,CODE) values ('4','Semi-équipée','D');
+Insert into CATEGORIE_CUISINE (ID_CATCUISINE,DESCRIPTION,CODE) values ('5','Non-équipée','E');
+-----------------------------------------------------
+REM INSERTING into CATEGORIE_ETAT
+
+Insert into CATEGORIE_ETAT (ID_CATETAT,DESCRIPTION,CODE) values ('1','Excellent état','A');
+Insert into CATEGORIE_ETAT (ID_CATETAT,DESCRIPTION,CODE) values ('2','Remis à neuf','B');
+Insert into CATEGORIE_ETAT (ID_CATETAT,DESCRIPTION,CODE) values ('3','Bon état','C');
+Insert into CATEGORIE_ETAT (ID_CATETAT,DESCRIPTION,CODE) values ('4','A rafraîchir','D');
+Insert into CATEGORIE_ETAT (ID_CATETAT,DESCRIPTION,CODE) values ('5','A rénover','E');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into CATEGORIE_SITUATION
+
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('1','Calme et huppé','A');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('2','Quartier résidentiel','A');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('3','Campagne','A');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('4','Calme','B');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('5','Proche accès autoroutier','B');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('6','Citadin - vue dégagée','C');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('7','Citadin - quartier vivant','C');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('8','Passablement bruyant','D');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('9','Peu d''espace','D');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('10','Quartier bruyant','E');
+Insert into CATEGORIE_SITUATION (ID_CATSITUATION,DESCRIPTION,CODE) values ('11','Quartier industriel','E');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into CANDIDAT
+
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('1','Guaillot','Etienne','rue des étoiles','12','Verviers','4800','0474/78.56.42','egaillot@skynet.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('2','Beniol','Maria','rue Général Walcourt','45','Liège','4020','0478/91.59.56','maria42@hotmail.com');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('3','Martin','Paul','rue de l''usine','12B','Spa','4900','087/45.56.52','NULL');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('4','Fréon','Jacques','avenue des platanes','95','Verviers','4800','087/22.26.45','jacques.freon@skynet.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('5','willot','Véronique','allée du petit bois','56','Eupen','4700','0495/12.13.54','vero_willot@gmail.com');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('6','Dumoulin','Pierre','rue Stévenin','3','Arlon','6700','063/46.56.59','pete_dumoulin@yahoo.fr');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('7','Hertay','Norbert','rue de l''égalité','34','Namur','5000','0477/55.64.23','nono_1964@gmail.com');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('8','Van Laer','Thierry','avenue Jean Delrez','125','Liège','4000','04/221.45.98','tche_vl@yahoo.fr');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('9','Barchon','Frédéric','rue du bac','128B','Grivegnée','4030','0477/73.32.34','fred_bar@edpnet.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('10','Monseur','Joseph','rue de Bruxelles','20','Waremme','4300','0496/12.19.95','jos_99@mobistar.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('11','Biermans','Louise','avenue Fernand Desonay','47','Verviers','4801','087/22.29.87','loulou@skynet.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('12','Ponsard','Marc','rue de la résistance','91','Liège','4020','04/220.46.59','marc_ponsard@yahoo.fr');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('13','Roks','Luc','allée du parc','15','Liège','4000','0477/45.58.52','NULL');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('14','Dormans','Philippe','rue de Liège','6','Visé','4600','0475/43.49.61','philou_do@skynet.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('15','drion','Sabine','rue Nicolas Hardy','78','Blégny','4670','0495/74.52.62','NULL');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('16','Delhez','Bruno','rue des cloutiers','178','Herve','4650','087/26.32.59','bruno.delhez@mobistar.be');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('17','Piron','Vincianne','avenue des 2 lacs','4','Seraing','4100','0477/17.81.92','vinouchette@yahoo.fr');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('18','Van Werst','Emile','rue de la montagne','96','Hognoul','4342','0475/49.59.56','mimile_45@hotmail.com');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('19','delcourt','Pascal','rue des prés','32','Verviers','4802','0495/15.32.61','pascou_delcourt@hotmail.com');
+Insert into CANDIDAT (ID_CANDIDAT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('20','Peroni','Cesar','avenue Roger Deston','21','Liège','4000','04/221.48.49','cesar_palace@gmail.com');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into CLIENT
+
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('1','Billon','Claude','rue des oiseaux','45','Verviers','4800','0475/47.55.52','claude_b@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('2','Fanzione','Joseph','rue de l''armée secrète','6','Liège','4020','0476/47.45.61','joseh_fanzione@hotmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('3','Evrard','Louise','rue de l''égalité','89','Spa','4950','0495/57.64.25','louise23@yahoo.fr');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('4','Barvaux','Marc','rue du pierreux','9B','Verviers','4800','087/22.47.98','marc.barvaux@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('5','Pirotton','Luc','allée du banc bleu','8','Angleur','4031','0476/77.32.39','luc_pi@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('6','Vandeberg','Sébastien','avenue Théo Lahty','6','Visé','4600','0496/11.17.77','seba_vande@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('7','Carabin','Sabine','rue des pères blancs','78','Blégny','4670','0495/15.37.64','sabine.carabin@gmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('8','Schmitz','Bruno','rue de la banque','125','Herve','4650','04/221.47.65','bruno22@mobistar.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('9','Desonnay','Vincianne','rue du centre','48','Seraing','4100','0477/44.58.94','vdeso@yahoo.fr');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('10','Beaujean','Emile','rue des charrons','13','Hognoul','4342','0475/43.48.61','beaujean_e@hotmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('11','Rensonnet','Pascal','rue du stade','64','Chaudfontaine','4050','0478/91.52.56','renso_perso@hotmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('12','Offermans','Dany','rue Grétry','21','Spa','4950','087/45.53.52','danyo@gmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('13','Sacré','Julien','rue des aulnes','15','Liège','4000','04/220.62.47','juju_sacre@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('14','Degey','Etienne','rue Jules Feller','98','Visé','4600','0495/79.52.67','titi23@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('15','Leclercq','Lucie','avenue de Thiervaux','45','Liège','4020','04/221.33.57','lulu_62@hotmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('16','Fabry','Evelyne','avenue des grands champs','212','Spa','4950','0477/13.81.97','evelynefabry@yahoo.fr');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('17','Raway','Marc','avenue du président Kennedy','12B','Verviers','4800','0475/49.59.53','marc_raway@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('18','Frère','Maria','rue florikosse','56','Eupen','4700','0495/13.13.57','mfrere@gmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('19','Burguet','Paul','rue Hubert Stevens','3','Beaufays','4052','0475/16.13.07','pburguet@yahoo.fr');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('20','Troupin','Jacques','rue de la justice','34','Wandre','4020','0475/84.00.64','ja_troupin@gmail.com');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('21','Wilkin','Véronique','quai Mativa','125','Liège','4000','04/220.46.57','vevewil@yahoo.fr');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('22','Guilmain','Pierre','rue de Herve','6','Grivegnée','4030','0474/74.56.88','pierrot_guilmain@edpnet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('23','Colette','Norbert','avenue des Martyrs','56','Sprimont','4140','0478/91.59.98','ncolette@mobistar.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('24','Jaquemin','Thierry','rue de la paix','4','Verviers','4801','087/45.56.12','thierry_j@skynet.be');
+Insert into CLIENT (ID_CLIENT,NOM,PRENOM,RUE,NUMERO,LOCALITE,CODE_POSTAL,TELEPHONE,EMAIL) values ('25','Renzo','Frédéric','rue de Bouny','78','Liège','4020','04/221.19.63','forza_renzo@yahoo.fr');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into VENDEUR
+
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('1','ldubois','7c6a180b36896a0a8c02787eeafb0e4c','Dubois','Luc','0474/78.56.19','ldubois@yahoo.fr');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('2','rdurant','6cb75f652a9b52798eb6cf2201057c73','Durand','Roger','0495/95.45.68','roger@gmail.com');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('3','sterak','819b0643d6b89dc9b579fdfc9094f28e','Terak','Sylvie','04/221.46.55','sylvie_92@scarlet.be');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('4','mpottier','34cc93ece0ba9e3f6f235d4af979b16c','Pottier','Martine','0496/65.35.62','mpo@gmail.com');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('5','asfar','db0edd04aaac4506f7edab03ac855d56','Sfar','Antoine','04/221.91.85','sfara_45@hotmail.com');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('6','sbecot','218dd27aebeccecae69ad8408d9a36bf','Becot','Stéphane','0478/75.69.48','stef_bec@skynet.be');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('7','lcront','00cdb7bb942cf6b290ceb97d6aca64a3','Cront','Luc','0477/64.65.32','luc23@skynet.be');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('8','cbaltus','b25ef06be3b6948c0bc431da46c2c738','Baltus','Claudine','04/221.36.35','claudine_b@edpnet.be');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('9','derniant','5d69dd95ac183c9643780ed7027d128a','Erniant','Dominique','0474/56.57.98','dodo@gmail.com');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('10','emerle','87e897e3b54a405da144968b2ca19b45','Merle','Edgar','0475/49.65.23','edgar_merle@scarlet.be');
+Insert into VENDEUR (ID_VENDEUR,PSEUDO,MDP,NOM,PRENOM,TELEPHONE,EMAIL) values ('11','lbarmik','ac673bc7e54a4045f144968b2ca1ac95','Barmik','Laura','0475/11.32.23','lbar@yahoo.be');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into MESSAGE
+
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('1','Bienvenue à tous dans le nouveau système de gestion immobilière',to_date('15/07/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('2','Offre remise pour le bien 2',to_date('17/07/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('3','Offre remise pour le bien 4',to_date('18/07/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('4','Baisse de prix pour le bien 9',to_date('21/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('5','Offre remise pour le bien 5',to_date('03/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('6','Coupure de courant prévue le 18 août de 16h00 à 18h00 pour cause de remplacement du tableau électrique. Pensez à imprimer les fiches dont vous aurez besoin.',to_date('10/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('7','Baisse de prix pour le bien 12',to_date('25/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('8','Offre remise pour le bien 16',to_date('16/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('9','Offre remise pour le bien 5',to_date('16/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('10','Baisse de prix pour le bien 13',to_date('21/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('11','Nouveau bien attribué (bien 18)',to_date('28/08/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('12','Offre remise pour le bien 16',to_date('03/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('13','Baisse de prix pour le bien 3',to_date('08/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('14','Travaux prévu dans la rue du 20/09/2012 au 29/09/2012. Prenez vos dispositions pour vous garer dans les rues adjacentes. Si RDV à l''agence, prévenez vos clients.',to_date('15/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('15','Offre remise pour le bien 19',to_date('17/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('16','Offre remise pour le bien 18',to_date('21/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('17','Offre remise pour le bien 14',to_date('26/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('18','Offre remise pour le bien 12',to_date('26/09/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('19','Offre remise pour le bien 19',to_date('02/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('20','Offre remise pour le bien 5',to_date('04/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('21','Offre remise pour le bien 26',to_date('06/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('22','Offre remise pour le bien 4',to_date('08/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('23','Offre remise pour le bien 1',to_date('08/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('24','Fermeture de l''agence à 16h00 le mercredi 31 octobre 2012',to_date('09/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('25','Offre remise pour le bien 7',to_date('09/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('26','Offre remise pour le bien 17',to_date('09/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('27','Offre remise pour le bien 18',to_date('11/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('28','Offre remise pour le bien 19',to_date('13/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('29','Offre remise pour le bien 29',to_date('15/10/12','DD/MM/RR'));
+Insert into MESSAGE (ID_MESSAGE,TEXTE,DATE_MESSAGE) values ('30','Message de test - ne pas envoyer',to_date('04/11/12','DD/MM/RR'));
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into ALERTER
+
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','1','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','4','N');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','7','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','9','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('1','10','N');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('2','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('3','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('3','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('4','9','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('5','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','1','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','3','N');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','6','N');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','7','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','9','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('6','10','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('7','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('7','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('8','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('9','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('10','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('11','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('12','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('13','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','1','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','7','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','9','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('14','10','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('15','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('15','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('16','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('17','2','N');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('18','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('18','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('19','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('19','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('20','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('21','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('22','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('22','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('23','1','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','1','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','2','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','3','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','5','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','7','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','9','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('24','10','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('25','7','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('26','9','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('27','4','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('28','6','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('28','8','L');
+Insert into ALERTER (ID_MESSAGE,ID_VENDEUR,STATUT) values ('29','8','L');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into BIEN
+
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('1','rue des clarisses','12','Esneux','4130','Superbe maison 3 façades avec gros volumes idéale pour profession libérale ou pour grande famille','250','650','2','7','1','3','2',to_date('12/06/12','DD/MM/RR'),'1','4','2','3','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('2','rue des carmes','56','Ougrée','4102','Maison 4ch avec jardin convenant pour famille nombreuse, travaux de rénovation à prévoir','175','250','1','4','0','2','1',to_date('17/06/12','DD/MM/RR'),'2','7','5','3','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('3','rue de l''alouette','45B','Vottem','4041','Agréable petite maison rénovée avec jardin sise au calme dans une impasse sur les hauteurs de Liège à proximité de toutes les commodités.','160','150','1','2','1','3','1',to_date('19/06/12','DD/MM/RR'),'3','4','2','3','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('4','avenue Georges Clémenceau','128','Embourg','4053','Cette charmante villa se compose d''un hall d''entrée,un très grand living lumineux, une cuisine équipée, 3 chambres, une SDB, un wc, un garage ainsi qu''un petit atelier bien pratique, le jardin est magnifique et merveilleusement entretenu.','150','1250','1','3','1','4','1',to_date('29/06/12','DD/MM/RR'),'4','1','2','3','5');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('5','impasse des Ursulines','87','Liège','4000','Maison 3 façades en bon état proche du centre ville.','135','0','1','3','1','3','1',to_date('05/07/12','DD/MM/RR'),'5','6','3','4','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('6','rue des vennes','9','Liège','4000','Maison à rénover à proximité du centre ville','135','250','1','2','0','2','1',to_date('05/07/12','DD/MM/RR'),'5','6','5','5','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('7','rue René Briaucourt','8','Verviers','4800','Bungalow avec une cour et très grand garage. Très bon état.','125','0','2','3','0','4','1',to_date('08/07/12','DD/MM/RR'),'6','5','3','4','6');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('8','rue du parc','16','Chênée','4032','Grande maison unifamilliale actuellement divisé en 10 chambres garnies. Possibilité de diviser en 5 appartements. Nouveau toit et chassis DV. Foyer gaz.','200','0','1','10','0','2','1',to_date('12/07/12','DD/MM/RR'),'7','8','4','5','3');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('9','avenue du jardin botanique','32','Liège','4000','Belle maison d''habitation avec terrasse arrière et jardin. La maison est louée actuellement à 800 euros/mois (+ charges) à 4 étudiants. Le bail se termine fin août 2012 et peut être reconduit.','165','250','1','4','0','2','1',to_date('12/07/12','DD/MM/RR'),'8','7','3','5','3');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('10','rue de la station','124','Spa','4900','Belle propriété idéalement située (dans un écrin de verdure) de 2.230 m² avec villa à rénover - accès en voiture par la rue de l''Evêque et servitude de passage vers l''avenue de la fontaine.','250','2230','1','3','1','4','1',to_date('18/07/12','DD/MM/RR'),'8','2','5','3','2');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('11','rue du centre','201','Oleye','4300','Bonne maison bel étage dans une belle rue peu fréquentée à proximité des commerces et transports. Beau jardin.','165','950','1','2','0','2','2',to_date('25/07/12','DD/MM/RR'),'9','4','3','2','9');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('12','allée Pierre Poljak','89','Lincent','4287','Très belle propriété avec magnifique jardin. Entrée par porte cochère et porche. Grande allée. Premier bâtiment avec un appartement au rez de chaussée et un atelier de peintre à l''étage.','285','1450','1','3','2','4','3',to_date('25/07/12','DD/MM/RR'),'10','3','4','1','1');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('13','boulevard du midi','46','Crisnée','4367','Composition: Deux immeubles de commerce et habitation (surface exploitable +/- 700 m² à rénover). Particularité: Situation exceptionnelle, idéal pour complexe Horeca (ancien restaurant avec une bonne réputation), petit hôtel, bureaux, ... ','700','0','1','6','0','2','1',to_date('25/07/12','DD/MM/RR'),'11','7','5','3','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('14','place du marché','33','Ans','4430','Composition: Immeuble de rapport composé de trois appartements 1 chambre et un appartement 2 chambres. Particularité: Bâtiment en bon état, très bonne situation (centre ville), énergies séparées. Le rez-de-chaussée ne fait pas partie de la vente.','185','0','1','2','1','2','2',to_date('27/07/12','DD/MM/RR'),'12','6','3','3','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('15','rue de la gare','7B','Waremme','4300','Immeuble de rapport avec 1600 euros net de rapport locatif avec chauffage central mazout, double vitrage, compteur bi-horaire comprenant 4 appartements 1 chambre et un studio. ','180','0','1','4','0','2','1',to_date('29/07/12','DD/MM/RR'),'13','6','4','4','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('16','rue du chêne','65','Verviers','4800','Grande maison unifamilliale avec beaucoups de possibilités. A proximité de l''autoroute,arrêt de bus,magasin,d''une pleine de jeu et d''un grand parc,... ','145','0','2','3','0','2','2',to_date('07/08/12','DD/MM/RR'),'14','8','2','4','3');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('17','allée des braconniers','11','Liège','4020','Maison bourgeoise 4 façades, sit. exceptionnelle dans 1 cadre de verdure romantique à 1 min. à pied de la gare Calatrava (Guillemins) et de son centre commercial.','160','85','2','4','0','4','1',to_date('19/08/12','DD/MM/RR'),'15','4','2','2','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('18','rue du vieux thier','94','Grivegnée','4030','Maison d''habitation rénovée,plein centre ! Maison totalement restaurée en 2006. Emplacement de parking riverain, environnement calme en plein centre! RC modeste:possibilité de réduction des droits d''enregistrement à 6% équipement: nouvelle toiture et isolation - plafonnage totalement neuf - Installation électrique aux normes- chauffage central au gaz avec chaudière haut rendement -installation sanitaire. Double vitrage, volets au rez et premier étage. Petite cour à l''arrière.','155','0','1','3','0','3','1',to_date('28/08/12','DD/MM/RR'),'16','7','1','3','3');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('19','rue des genêts','64','Beaufays','4052','Villa de standing 4 façades pouvant convenir pour une profession libérale, finitions de luxe, 5 chambres, plusieurs bureaux, sauna et douche, salle de bains, cuisine américaine hyper équipée, grand living, mezzanine, balcon, terrasse,3 garages- parking intérieur 4 voitures. Bien hors du commun-absolument à visiter. Ce bien peut parfaitement convenir pour gros bureaux d''affaires- beaucoup de possibilités.','230','650','4','5','3','4','2',to_date('29/08/12','DD/MM/RR'),'17','1','2','1','5');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('20','place de la halle','32','Seraing','4100','Agréable maison 2 façades proche de toutes commodités.Belle maison, très lumineuse, composée : 1 séjour, 1 cuisine équipée, 1 salle de bain, 3 chambres, 1 cave, 1 terrasse et jardin.','165','550','1','3','0','2','1',to_date('30/08/12','DD/MM/RR'),'18','5','3','3','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('21','rue André Durieux','51','Rocourt','4000','Rocourt (près Clinique Saint-Vincent) maison bourgeoise avec possibilité d''aménagement pour profession libérale.','175','700','2','4','2','4','1',to_date('03/09/12','DD/MM/RR'),'19','6','2','3','2');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('22','rue du bonnet','7','Neupré','4120','Maison d''habitation type bel étage entièrement rénovée, située dans un cadre boisé au calme, proche de toutes commodités.','180','1200','2','4','2','2','1',to_date('04/09/12','DD/MM/RR'),'20','6','2','3','9');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('23','rue Victor Dury','46','Liers','4042','Uni familiale 7 chbres ou maison rapport 2 appart/2 studios. Bon état général, cc mazout, DV, toiture ok, cour, caves. ','220','0','1','7','0','2','1',to_date('04/09/12','DD/MM/RR'),'21','6','3','2','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('24','allée du 15 mars','125','Boncelles','4100','Immeuble 3 appartements rénové et agréé. Immeuble 2 appartements rénovés et agréés.3/4 chambres,vaste séjour, cuisine équipée, salle de douche/bains et buanderie. IDEM pour les étages 2éme et 3 éme étages (duplex). Terrasse et jardin. REVENU: 1200 euros hors charges.','165','650','1','4','0','2','1',to_date('09/09/12','DD/MM/RR'),'22','8','3','4','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('25','rue des éperons','23','Nandrin','4550','Charmante maison 3 chambres située dans un quartier calme avec petit jardin ensoleillé toute la journée et à l''abri des regards ! Cette maison a été rénovée en quasi totalité (nouveau toit (isolation 8 cm), nouveaux velux, nouvelle chaudière, nouvelle électricité partielle) Reste uniquement plafonnage et peinture du hall d''entrée. Beaux espaces sobres bien aménagés par son propriétaire !','195','450','1','3','0','2','2',to_date('10/09/12','DD/MM/RR'),'23','4','2','3','7');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('26','rue des minières','65','Richelle','4600','Au calme, proche de toutes commodités : maison 3 chambres d''env. 144 m 2 de surface habitable, avec parking 2 à 3 voitures, chauffage central mazout , cuisine bien équipée, 2 wc, une sd bain et douche, garage une voiture moyenne, terrasse toujours ensoleillée, beau petit jardin et caves bien aménagées (buanderie, chaufferie et cave de rangement). ','144','550','1','3','1','3','1',to_date('12/09/12','DD/MM/RR'),'24','4','4','3','7');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('27','rue des pinsons','47','Warsage','4608','Immeuble de rapport : 4 petits studios d''une chambre dans quartier très calme (Lodieu). Très bonne rentabilité.','180','0','1','4','0','2','1',to_date('24/09/12','DD/MM/RR'),'25','3','4','2','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('28','boulevard Saint-Martin','29','Saive','4671','Charmante maison 4 chambres aux nombreux volumes, située au calme tout en étant à 2 minutes des axes autoroutiers (liaisons E40 E25)! ATOUTS: superbe vue dégagée sur la ville, nombreux rangements (3 caves + 1 grenier), très lumineuse (jardin plein sud), en bon état (chassis PVC, toiture de 2007), cheminée décorative (conduit existe), très accessible (autoroute à 2 minutes, centre ville à 4 minutes!), beaux volumes, nombreuses possibilités A PREVOIR: rénovation de l''électricité et ancienne chaudière ','185','980','2','4','0','3','1',to_date('28/09/12','DD/MM/RR'),'19','5','5','3','3');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('29','rue Georges Simenon','45','Liège','4020','Dans une des rues les plus charmantes de la ville de Liège, une maison comprenant un JARDIN et, fait exceptionnel, un ATELIER au fond du jardin. La maison possède un chauffage central au gaz et est habitable (même si des travaux peuvent être réalisés). Le toit est en bon état. Possibilité de réduction des droits d''enregistrement.','165','750','2','3','1','4','1',to_date('05/10/12','DD/MM/RR'),'15','6','3','4','8');
+Insert into BIEN (ID_BIEN,RUE,NUMERO,LOCALITE,CODE_POSTAL,DESCRIPTION,SURFACE_HABITABLE,SURFACE_JARDIN,NB_PAV,NB_CHAC,NB_GARAGE,NB_FACADE,NB_SDB,DATE_MISE_EN_VENTE,ID_CLIENT,ID_CATSITUATION,ID_CATETAT,ID_CATCUISINE,ID_CATBIEN) values ('30','rue du bosquet','8','Herve','4650','Grande maison bourgeoise à rénover de +- 200 m² habitable donnant accès deux rues calmes. Maison jouissant d''une excellente situation. Possibilité de garage.','200','650','3','6','0','4','2',to_date('12/10/12','DD/MM/RR'),'15','3','5','5','3');
+
+REM INSERTING into GERER
+
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('1','1');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('11','1');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('24','1');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('25','1');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('30','1');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('2','2');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('12','2');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('14','2');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('3','3');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('4','3');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('13','3');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('4','4');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('12','4');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('18','4');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('20','4');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('22','4');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('30','4');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('1','5');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('5','5');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('16','5');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('23','5');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('6','6');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('15','6');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('19','6');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('26','6');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('7','7');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('10','7');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('21','7');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('8','8');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('19','8');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('25','8');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('28','8');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('29','8');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('9','9');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('17','9');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('10','10');
+Insert into GERER (ID_BIEN,ID_VENDEUR) values ('27','10');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into HISTORIQUE_PRIX
+
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('1','225000',to_date('12/06/12','DD/MM/RR'),'1');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('2','156000',to_date('17/06/12','DD/MM/RR'),'2');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('3','175000',to_date('19/06/12','DD/MM/RR'),'3');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('4','210000',to_date('29/06/12','DD/MM/RR'),'4');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('5','150000',to_date('05/07/12','DD/MM/RR'),'5');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('6','125000',to_date('05/07/12','DD/MM/RR'),'6');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('7','146500',to_date('08/07/12','DD/MM/RR'),'7');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('8','195000',to_date('12/07/12','DD/MM/RR'),'8');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('9','205000',to_date('12/07/12','DD/MM/RR'),'9');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('10','245000',to_date('18/07/12','DD/MM/RR'),'10');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('11','156000',to_date('25/07/12','DD/MM/RR'),'11');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('12','224000',to_date('25/07/12','DD/MM/RR'),'12');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('13','182000',to_date('25/07/12','DD/MM/RR'),'13');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('14','164000',to_date('27/07/12','DD/MM/RR'),'14');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('15','184000',to_date('29/07/12','DD/MM/RR'),'15');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('16','138000',to_date('07/08/12','DD/MM/RR'),'16');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('17','145000',to_date('19/08/12','DD/MM/RR'),'17');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('18','135000',to_date('28/08/12','DD/MM/RR'),'18');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('19','265000',to_date('29/08/12','DD/MM/RR'),'19');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('20','134000',to_date('30/08/12','DD/MM/RR'),'20');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('21','173000',to_date('03/09/12','DD/MM/RR'),'21');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('22','189000',to_date('04/09/12','DD/MM/RR'),'22');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('23','178500',to_date('04/09/12','DD/MM/RR'),'23');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('24','169500',to_date('09/09/12','DD/MM/RR'),'24');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('25','205000',to_date('10/09/12','DD/MM/RR'),'25');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('26','164500',to_date('12/09/12','DD/MM/RR'),'26');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('27','184000',to_date('24/09/12','DD/MM/RR'),'27');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('28','182500',to_date('28/09/12','DD/MM/RR'),'28');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('29','152000',to_date('05/10/12','DD/MM/RR'),'29');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('30','285000',to_date('12/10/12','DD/MM/RR'),'30');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('31','195000',to_date('21/08/12','DD/MM/RR'),'9');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('32','215000',to_date('25/08/12','DD/MM/RR'),'12');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('33','175000',to_date('21/08/12','DD/MM/RR'),'13');
+Insert into HISTORIQUE_PRIX (ID_PRIX,MONTANT,DATE_PRIX,ID_BIEN) values ('34','165000',to_date('08/09/12','DD/MM/RR'),'3');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+REM INSERTING into OFFRE
+
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('1','145000',to_date('17/07/12','DD/MM/RR'),'R','1','2');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('2','195000',to_date('18/07/12','DD/MM/RR'),'R','2','4');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('3','144500',to_date('03/08/12','DD/MM/RR'),'R','3','5');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('4','128000',to_date('16/08/12','DD/MM/RR'),'R','4','16');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('5','148000',to_date('16/08/12','DD/MM/RR'),'R','5','5');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('6','125000',to_date('03/09/12','DD/MM/RR'),'R','6','16');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('7','257500',to_date('17/09/12','DD/MM/RR'),'R','7','19');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('8','122000',to_date('21/09/12','DD/MM/RR'),'R','8','18');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('9','161000',to_date('26/09/12','DD/MM/RR'),'A','9','14');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('10','210000',to_date('26/09/12','DD/MM/RR'),'E','10','12');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('11','260000',to_date('02/10/12','DD/MM/RR'),'I','11','19');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('12','147500',to_date('04/10/12','DD/MM/RR'),'E','3','5');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('13','158000',to_date('06/10/12','DD/MM/RR'),'R','13','26');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('14','205000',to_date('08/10/12','DD/MM/RR'),'A','14','4');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('15','215000',to_date('08/10/12','DD/MM/RR'),'I','15','1');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('16','140000',to_date('09/10/12','DD/MM/RR'),'R','16','7');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('17','142500',to_date('09/10/12','DD/MM/RR'),'A','16','17');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('18','133000',to_date('11/10/12','DD/MM/RR'),'A','18','18');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('19','262000',to_date('13/10/12','DD/MM/RR'),'E','19','19');
+Insert into OFFRE (ID_OFFRE,MONTANT,DATE_OFFRE,STATUT,ID_CANDIDAT,ID_BIEN) values ('20','152000',to_date('15/10/12','DD/MM/RR'),'A','8','29');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+COMMIT;
