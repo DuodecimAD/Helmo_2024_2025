@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import org.junit.jupiter.api.Test;
 
 class ArtistTest {
-	// DONE exercice 3
+	
 	@Test
 	public void initsWithValidArgs() {
 		Artist artist = new Artist("Mozart", LocalDate.of(1756, 1, 27));

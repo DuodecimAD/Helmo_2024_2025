@@ -1,17 +1,17 @@
 <?php
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    echo '<a href="../login.php" id="loginButton">Me connecter</a>';
+if (!isset($_SESSION['user']['loggedIn']) || !$_SESSION['user']['loggedIn']) {
+    echo '<a href="login.php" id="loginButton">Me connecter</a>';
 } else {
 ?>
     <div id="loggedin">
         <div id="userInfos">
-            <img src="<?php echo $_SESSION['avatar']; ?>" alt="avatar">
+            <img src="<?php echo $_SESSION['user']['photo']; ?>" alt="photo">
 
             <?php
-                if($_SESSION['role'] === 'broc') {
-                    echo "<a href=\"espaceBrocanteur.php\">" . $_SESSION['email'] . "</a>";
+                if($_SESSION['user']['est_administrateur'] === 0) {
+                    echo "<a href=\"espaceBrocanteur.php\">" . $_SESSION['user']['courriel'] . "</a>";
                 } else {
-                    echo "<a href=\"espaceAdmin.php\">" . $_SESSION['email'] . "</a>";
+                    echo "<a href=\"espaceAdmin.php\">" . $_SESSION['user']['courriel'] . "</a>";
                 }
             ?>
         </div>
@@ -21,10 +21,14 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 <?php
 }
+
+//$_SESSION = [];
+var_dump($_SESSION);
+
 ?>
 
 <header id="headerPage">
-    <img src="images/logo.svg" alt="PEZBroc" >
+    <img src="assets/images/logo.svg" alt="PEZBroc" >
 </header>
 
 <nav>
@@ -35,7 +39,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <li><a href="objets.php" <?php if($title == "Objets") { echo "class=\"active\"";} ?>>Objets</a></li>
 
         <?php
-            if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+            if(!isset($_SESSION['user']['loggedIn']) || !$_SESSION['user']['loggedIn']) {
                 echo "<li><a href=\"inscription.php\"";
 
                 if ($title == "M'inscrire") {

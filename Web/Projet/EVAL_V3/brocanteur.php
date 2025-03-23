@@ -16,7 +16,7 @@ require_once("inc/head.inc.php");
     <main id="Brocanteur" class="max-width">
         <section id="BrocanteurProfil" class="boite">
             <div>
-                <img src="images/brocanteur.jpg" alt="brocanteurA">
+                <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
             </div>
 
             <div>

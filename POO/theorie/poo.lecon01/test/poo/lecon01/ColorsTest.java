@@ -17,13 +17,11 @@ class ColorsTest {
 
     @Test
     public void lightnessForGreyIs_50_Percent() {
-    	//DONE : exercice 1
         assertEquals(0.5f, Colors.getLightness(128, 128, 128), Colors.TOLERANCE);
     }
 
     @Test
     public void ligthnessForOliveIs_25_Percent() {
-        //DONE : exercice 1
         assertEquals(0.25f, Colors.getLightness(128, 128, 0), Colors.TOLERANCE);
     }
 
@@ -36,9 +34,6 @@ class ColorsTest {
     public void hueForOliveIs_60_Degrees() {
         assertEquals(60.0f, Colors.getHue(128,128,0), Colors.TOLERANCE);
     }
-
-
-    //DONE : exercice 3
     
     @Test
     public void SaturationIs_0() {
@@ -57,7 +52,6 @@ class ColorsTest {
         assertEquals(0.904f, Colors.getSaturation(217, 11, 67), Colors.TOLERANCE);
     }
     
-    //DONE: exercice 4 tests
     @Test
     public void toHSL_test() {
     	assertArrayEquals(new float[]{0.0f, 0.0f, 0.0f}, Colors.toHSL(0, 0, 0), Colors.TOLERANCE);
@@ -65,7 +59,6 @@ class ColorsTest {
     	assertArrayEquals(new float[]{0.0f, 0.0f, 0.9999f}, Colors.toHSL(255, 255, 255), Colors.TOLERANCE);
     }
     
-    //DONE : exercice 5, ajouter les tests
     @Test
     public void complementaryColor_test() {
     	
@@ -82,7 +75,6 @@ class ColorsTest {
     	assertArrayEquals(new float[]{164.0f, 0.904f, 0.447f}, test3, Colors.TOLERANCE);
     }
     
-    // DONE : exercice 7 tests
     @Test
     public void inRange_test() {
     	assertEquals(0, Colors.inRange(0));

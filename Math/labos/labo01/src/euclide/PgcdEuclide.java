@@ -1,15 +1,16 @@
 package euclide;
 
 /**
- * L'algorithme d'Euclide permet de calculer le PGCD de deux entiers naturels a et b.
+ * L'algorithme d'Euclide permet de calculer le PGCD de deux entiers naturels a
+ * et b.
  * 
  */
 
 public class PgcdEuclide {
 	/**
-	 * Calcul du PGCD de manière itérative en suivant l'algorithme d'Euclide standard
-	 * (par division euclidienne). 
-	 * Cet algorithme est applicable dans le cas de deux nombres entiers positifs a et b.
+	 * Calcul du PGCD de manière itérative en suivant l'algorithme d'Euclide
+	 * standard (par division euclidienne). Cet algorithme est applicable dans le
+	 * cas de deux nombres entiers positifs a et b.
 	 * 
 	 * @param a premier nombre naturel
 	 * @param b deuxième nombre naturel
@@ -17,16 +18,15 @@ public class PgcdEuclide {
 	 */
 	public static int pgcdEuclide(int a, int b) {
 		int r;
-		int d;
-		if(a < 0 || b < 0) {
+		if (a < 0 || b < 0) {
 			throw new IllegalArgumentException("erreur : a ou b n'est pas un chiffre naturel");
-		} else if(b == 0) {
+		} else if (b == 0) {
 			return a;
 		} else {
 			r = a % b;
 		}
-		
-	    return pgcdEuclide(b, r);
+
+		return pgcdEuclide(b, r);
 	}
-	
+
 }

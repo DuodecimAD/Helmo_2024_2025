@@ -22,3 +22,5 @@
         }
     }, 1000);
 </script>
+
+<?php //require_once("classes/reloadScript.php"); ?>

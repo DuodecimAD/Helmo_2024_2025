@@ -7,7 +7,7 @@ session_start();
 
 <?php
 $title = "Accueil";
-require_once("inc/head.inc.php");
+require_once $_SERVER['DOCUMENT_ROOT'] . "/inc/head.inc.php";
 ?>
 
 <body>
@@ -15,7 +15,7 @@ require_once("inc/head.inc.php");
     <?php require_once("inc/header.inc.php"); ?>
     <main id="Home_main">
         <div id="Home_img">
-            <img src="images/62ed5a2fc5f4b.jpeg" alt="Grande image de distributeurs PEZ">
+            <img src="assets/images/62ed5a2fc5f4b.jpeg" alt="Grande image de distributeurs PEZ">
         </div>
 
         <section id="Home_who">
@@ -34,21 +34,21 @@ require_once("inc/head.inc.php");
 
                 <h2>Exemples de distributeurs PEZ vendus par nos brocanteurs</h2>
                 <article class="boite">
-                    <img src="images/D-09636-0001.jpg" alt="Lampo" height="150">
+                    <img src="assets/images/D-09636-0001.jpg" alt="Lampo" height="150">
                     <h3>Lampo</h3>
                     <p>En vente chez Brocanteur A</p>
                     <a href="objet.php">Voir</a>
                 </article>
 
                 <article class="boite">
-                    <img src="images/D-09816-0001.jpg" alt="Grumpy Bear" height="150">
+                    <img src="assets/images/D-09816-0001.jpg" alt="Grumpy Bear" height="150">
                     <h3>Grumpy Bear</h3>
                     <p>En vente chez Brocanteur B</p>
                     <a href="objet.php">Voir</a>
                 </article>
 
                 <article class="boite">
-                    <img src="images/D-06911-0001.jpg" alt="Red Bird" height="150">
+                    <img src="assets/images/D-06911-0001.jpg" alt="Red Bird" height="150">
                     <h3>Red Bird</h3>
                     <p>En vente chez Brocanteur C</p>
                     <a href="objet.php">Voir</a>

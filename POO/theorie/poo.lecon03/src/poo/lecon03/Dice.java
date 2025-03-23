@@ -1,8 +1,7 @@
 package poo.lecon03;
 
 public class Dice {
-	//DONE : exercice 01-03
-	//DONE : exercice 12.1
+
 	private int facesCount;
 	private int topFace;
 	
@@ -46,9 +45,8 @@ public class Dice {
 	public void setTopFace(int topFace) {
 		this.topFace = topFace;
 	}
-
 	
-	// DONE : exercice 06
+	@Override
 	public String toString() {
 		return "Dice(facesCount: "+ getFacesCount() +", topFace: "+ getTopFace() +")";
 	}

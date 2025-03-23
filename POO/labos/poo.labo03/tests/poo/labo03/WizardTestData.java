@@ -14,4 +14,8 @@ class WizardTestData {
 	static final Wizard HERMIONE_GRANGER = new Wizard("Hermione Granger");
 	static final Wizard TERRY_BOOT = new Wizard("Terry Boot");
 	static final Wizard BRANDY_BROCKLEHURST = new Wizard("Brandy Brocklehurst");
+	static final Wizard JUSTIN_FINCH_FLETCHEY  = new Wizard("Justin Finch-Fletchey");
+	static final Wizard SUSAN_BONES  = new Wizard("Susan Bones");
+	static final Wizard HANNAH_ABBOT = new Wizard("Hannah Abbot");
+	
 }

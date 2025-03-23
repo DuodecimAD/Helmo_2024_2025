@@ -6,7 +6,7 @@ import java.util.Objects;
 
 
 public class Album {
-	// DONE exercice 4
+
 	public final static Artist DEFAULT_ARTIST = new Artist("Inconnu");
 	private final String title;
 	private final Artist artist;

@@ -124,7 +124,6 @@ public class ColorTest {
 		assertEquals(helmo.hashCode(), clone.hashCode());
 	}
 	
-	//DONE exercice 1
 	@Test
 	public void helmoColorCreation() {
 		Color helmoColor = new Color(217,11,67);
@@ -138,7 +137,6 @@ public class ColorTest {
 		assertEquals(0.447f, complementary.getLightness(), Color.TOLERANCE);
 	}
 	
-	//DONE exercice 2
 	@Test
 	public void doubleObjetSameOrNot() {
 		Color helmo1 = new Color(217,11,67);

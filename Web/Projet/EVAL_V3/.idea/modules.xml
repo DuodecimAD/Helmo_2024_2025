@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EVAL_PHPSTORM_TEST.iml" filepath="$PROJECT_DIR$/.idea/EVAL_PHPSTORM_TEST.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Labo/.idea/Labo.iml" filepath="$PROJECT_DIR$/../../Labo/.idea/Labo.iml" />
     </modules>
   </component>
 </project>

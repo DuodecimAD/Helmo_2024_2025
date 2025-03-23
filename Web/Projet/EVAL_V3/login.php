@@ -1,34 +1,7 @@
 <?php
-session_start();
 
-$validUsers = [
-    'admin@admin.aa' => ['password' => 'admin', 'role' => 'admin', 'avatar' => '../images/inconnu.jpg'],
-    'broc@broc.aa' => ['password' => 'broc', 'role' => 'broc', 'avatar' => '../images/brocanteur.jpg']
-];
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $email = filter_var(trim($_POST['email']) ?? '', FILTER_VALIDATE_EMAIL);
-    $password = trim($_POST['password'] ?? '');
-
-    if (!$email) {
-        $errorMessage = "Votre email n'est pas valide.";
-    } else if (!isset($validUsers[$email])) {
-        $errorMessage = "Votre email n'existe pas.";
-    } else if ($validUsers[$email]['password'] !== $password) {
-        $errorMessage = "Votre mot de passe est incorrect.";
-    } else {
-        $_SESSION = [
-            'loggedin' => true,
-            'email'    => $email,
-            'avatar'   => $validUsers[$email]['avatar'],
-            'role'     => $validUsers[$email]['role']
-        ];
-
-        unset($errorMessage);
-        header("Location: " . ($_SESSION['role'] === 'admin' ? "espaceAdmin.php" : "espaceBrocanteur.php"));
-        exit;
-    }
-}
+require_once $_SERVER['DOCUMENT_ROOT'] . '/php/login.controller.php';
 
 ?>
 <!DOCTYPE html>
@@ -48,7 +21,7 @@ require_once("inc/head.inc.php");
         <div>
             <label for="email">Email *</label>
             <input type="email" name="email" id="email" required placeholder="Entrez votre email"
-                <?php if(isset($errorMessage) && $errorMessage === "Votre mot de passe est incorrect."){ ?> value="<?php echo htmlspecialchars($email) ?>"<?php } ?>>
+                <?php if(isset($errorMessage) && $errorMessage === "Votre mot de passe est incorrect."){ ?> value="<?php echo htmlspecialchars($_SESSION['user']['courriel']) ?>"<?php } ?>>
 
             <label for="password">Mot de passe *</label>
             <input type="password" name="password" id="password" class="mdp" required placeholder="Entrez votre mot de passe">

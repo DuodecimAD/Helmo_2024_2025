@@ -21,7 +21,6 @@ public class SerrureModulaire {
 
 	public static boolean verifierCode(int nombreSecret, int facteur, int modulo, int codeEntree) {
 		
-		// DONE verifierCode
 		int codeAcces = nombreSecret * facteur % modulo;
 		int nbTentatives = 0;
 		
@@ -46,21 +45,21 @@ public class SerrureModulaire {
     	
         // Paramètres de la serrure
     	
-    	// DONE 1. Demande du nombre secret à l'utilisateur
+    	// 1. Demande du nombre secret à l'utilisateur
     	int nombreSecret = Console.lireInt("Entrez le nombre secret : ");
     	
-    	// DONE 2. Demande du modulo
+    	// 2. Demande du modulo
     	int modulo = Console.lireInt("Entrez le modulo : ");
     	
-    	// DONE 3. Détermination du facteur aléatoire
+    	// 3. Détermination du facteur aléatoire
     	int facteur = (int) ((Math.random() * (100 - 10)) + 10);
     	System.out.println("Le facteur aléatoire est : " + facteur);
     	
-		// DONE 4. Calcul du code d'accès
+		// 4. Calcul du code d'accès
     	int codeAcces = nombreSecret * facteur % modulo;
     	System.out.println("Le code d'accès est : " + codeAcces);
     	
-        // DONE Demande du code à l'utilisateur et vérification du code - 5 tentatives maximum
+        // Demande du code à l'utilisateur et vérification du code - 5 tentatives maximum
     	int codeEntree = Console.lireInt("Entrez votre code : ");
     	boolean found = verifierCode(nombreSecret, facteur, modulo, codeEntree);
     	
@@ -69,6 +68,6 @@ public class SerrureModulaire {
     	} else {
     		System.out.println("Code incorrect. Accès définitivement refusé.");
     	}
-
+    	// System.exit(0);
     }	
 }
