@@ -33,9 +33,7 @@ public class VideoGame {
 		
 		this(copy != null ? copy.name : "", copy != null ? copy.pegiAge : PEGIAge.PEGI_3);
 	}
-	
-	//DONE: exercice 1
-	
+		
 	public String getName() {
 		return name;
 	}

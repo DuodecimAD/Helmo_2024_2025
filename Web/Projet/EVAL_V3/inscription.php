@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password   = trim($_POST['password'] ?? '');
     $passwordVerif   = trim($_POST['passwordVerif'] ?? '');
     $avatar     = $_FILES['avatar'] ?? null;
+    $description = trim($_POST['description'] ?? '');
+    $visible = $_POST['visible'] ?? 0;
 
     if ($nom === '') {
         $errorMessage = "Le nom semble incorrect.";
@@ -77,38 +79,46 @@ require_once("inc/head.inc.php");
 
                 <label for="prenom">Prénom *</label>
                 <input type="text" name="prenom" id="prenom" required placeholder="Entrez votre prénom"
-                    <?php if(isset($prenom)){ ?> value="<?php echo htmlspecialchars($prenom) ?>"<?php } ?>>
+                    <?php if(isset($prenom)){ ?> value="<?php echo htmlspecialchars($prenom) ?>"<?php } ?>
+                >
 
                 <label for="email">Email *</label>
                 <input type="email" name="email" id="email" required placeholder="Entrez votre email"
-                    <?php if(isset($email)){ ?> value="<?php echo htmlspecialchars($email) ?>"<?php } ?>>
+                    <?php if(isset($email)){ ?> value="<?php echo htmlspecialchars($email) ?>"<?php } ?>
+                >
             </div>
 
             <div>
-                <img src="images/inconnu.jpg" id="previewAvatar" alt="ajouter photo">
-                <input type="file" name="avatar" id="avatar" accept="image/*" required onchange="previewImage(event)">
+                <img src="assets/images/inconnu.jpg" id="previewAvatar" alt="ajouter photo">
+                <input type="file" name="avatar" id="avatar" accept="image/*" onchange="previewImage(event)">
             </div>
 
             <div>
                 <div>
                     <label for="password">Mot de passe *</label>
-                    <input type="password" name="password" id="password" class="mdp" required placeholder="Entrez votre mot de passe">
+                    <input type="password" name="password" id="password" class="mdp" required placeholder="Entrez votre mot de passe"
+                        <?php if(isset($password)){ ?> value="<?php echo htmlspecialchars($password) ?>"<?php } ?>
+                    >
                 </div>
                 <div>
                     <label for="passwordVerif">Vérification mot de passe *</label>
-                    <input type="password" name="passwordVerif" id="passwordVerif" class="mdp" required placeholder="Répétez votre mot de passe">
+                    <input type="password" name="passwordVerif" id="passwordVerif" class="mdp" required placeholder="Répétez votre mot de passe"
+                        <?php if(isset($passwordVerif)){ ?> value="<?php echo htmlspecialchars($passwordVerif) ?>"<?php } ?>
+                    >
                 </div>
             </div>
 
             <div>
                 <label for="description">Description *</label>
-                <textarea name="message" id="description" rows="17" cols="64" placeholder="Entrez votre description"></textarea>
+                <textarea name="description" id="description" rows="17" cols="64" placeholder="Entrez votre description">
+                    <?php if(isset($description)){ echo htmlspecialchars($description); } ?>
+                </textarea>
             </div>
 
             <div>
                 <label for="visible">Souhaiter-vous être visible sur le site, permettant ainsi aux
                     visiteurs de visualiser votre profil, ainsi que vos objets ?</label>
-                <input type="checkbox" name="visible" id="visible">
+                <input type="checkbox" name="visible" id="visible" checked>
             </div>
 
             <div>

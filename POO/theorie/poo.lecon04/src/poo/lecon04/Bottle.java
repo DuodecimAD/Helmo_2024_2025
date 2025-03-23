@@ -18,7 +18,6 @@ public class Bottle {
 		
 	}
 	
-	//DONE: exercice 2
 	public Bottle(Bottle original) {
 		
 		this.volumeCapacity = Arrays.copyOf(original.volumeCapacity, 2);

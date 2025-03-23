@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
+if (!isset($_SESSION['user']['loggedIn']) || $_SESSION['user']['est_administrateur'] !== true) {
     header("Location: login.php");
     exit;
 }
@@ -30,7 +30,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
             <h2>Pas d'emplacement attribué</h2>
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -45,7 +45,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -75,7 +75,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -92,7 +92,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -107,7 +107,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -122,7 +122,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -137,7 +137,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -152,7 +152,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -170,7 +170,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['role'] !== 'admin') {
     </main>
 
     <?php require_once("inc/footer.inc.php"); ?>
-    <?php require_once("classes/reloadScript.php"); ?>
+
 
 </body>
 </html>

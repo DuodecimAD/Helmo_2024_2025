@@ -1,7 +1,7 @@
 package poo.lecon03;
 
 public class VideoGame {
-	//DONE exercice 17
+
 	private String nom;
 	private PEGIAge age;
 	

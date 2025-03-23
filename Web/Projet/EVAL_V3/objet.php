@@ -16,7 +16,7 @@ require_once("inc/head.inc.php");
 <main id="Objet" class="max-width">
     <section id="ObjetProfil" class="boite">
         <div>
-            <img src="images/D-09636-0001.jpg" alt="objet D-09636-0001">
+            <img src="assets/images/D-09636-0001.jpg" alt="objet D-09636-0001">
         </div>
 
         <div>

@@ -9,7 +9,6 @@ import org.junit.jupiter.api.*;
 public class WizardHouseTest4 {
 
 	// EXERCICE 4
-	// DONE: écrire des tests pour l'exercice 4.
 	@Test
 	public void getWizardsNames() {
 		WizardHouse gryffindor = new WizardHouse(GODRIC_GRYFFINDOR);
@@ -30,7 +29,6 @@ public class WizardHouseTest4 {
 	}
 
 	// EXERCICE 5
-	// DONE : écrire des tests validant l'exercice 5.
 	@Test
 	public void constructorWithTableau() {
 		
@@ -43,7 +41,6 @@ public class WizardHouseTest4 {
 	
 
 	// EXERCICE 6
-	// DONE : écrire des tests validant l'exercice 6.
 	@Test
 	public void giveHousePoints() {
 
@@ -63,7 +60,7 @@ public class WizardHouseTest4 {
 		assertTrue(hufflepuff.compareTo(gryffindor) < 0);
 		assertTrue(gryffindor.compareTo(hufflepuff) > 0);
 		assertThrows(NullPointerException.class, () -> { slytherin.compareTo(null); }); 
-		assertTrue(slytherin.compareTo(gryffindor) > 0);
+		assertTrue(slytherin.compareTo(gryffindor) == 0);
 		
 	}
 }

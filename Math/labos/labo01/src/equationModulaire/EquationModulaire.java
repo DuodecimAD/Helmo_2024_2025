@@ -23,7 +23,7 @@ public class EquationModulaire {
      */
     public static int solveurAddition(int a, int b, int n) {
     	
-    	// TODO
+    	// TODO : on a zappé, à faire
 	    return 0;  // A modifier !!!
     }
     
@@ -43,7 +43,7 @@ public class EquationModulaire {
      */
     public static int solveurMultiplication(int a, int b, int n) {
     	
-    	// TODO
+    	// TODO : on a zappé, à faire
 	    return 0;  // A modifier !!!
     }
    

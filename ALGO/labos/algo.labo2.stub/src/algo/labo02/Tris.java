@@ -129,9 +129,10 @@ public class Tris {
 		
 		// FIXME : Exercice 3
 		
+		int k = 0;
 		for (int i = 0; i < comptage.length; i++) {
 			for (int j = 0; j < comptage[i]; j++) {
-				destination[j] = (byte) i;
+				destination[k++] = (byte) (i - OFFSET);
 			}
 		}
 		

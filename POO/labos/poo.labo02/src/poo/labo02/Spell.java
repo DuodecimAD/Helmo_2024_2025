@@ -64,7 +64,6 @@ public class Spell {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return "Spell(incantation: " + this.getIncantation() + ")";
 	}
 	

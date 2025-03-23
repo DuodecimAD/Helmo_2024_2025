@@ -34,9 +34,8 @@ public class Event {
 			   datetime.compareTo(end) <= 0;
 	}
 	
-	// DONE exercice 9 b1
-		@Override
-		public String toString() {
-			return getName() + " " + getStart() + " " + getEnd();
-		}
+	@Override
+	public String toString() {
+		return getName() + " " + getStart() + " " + getEnd();
+	}
 }

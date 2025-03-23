@@ -1,8 +1,7 @@
 package poo.lecon03;
 
 public class Domino {
-	// DONE exercice 02-04
-	// DONE exercice 12.2
+
 	private int group1;
 	private int group2;
 
@@ -66,7 +65,6 @@ public class Domino {
 		}
 	}
 
-	// DONE exercice 07
 	public String toString() {
 		if (getSpotsAt(0) == 0 && getSpotsAt(1) == 0) {
 			return "Domino(spots 1: None, spots 2: None)";
@@ -79,7 +77,6 @@ public class Domino {
 		return "Domino(spots 1: " + getSpotsAt(0) + ", spots 2: " + getSpotsAt(1) + ")";
 	}
 
-	// DONE exercice 10
 	public boolean equals(Object o) {
 		if (this == o) {
 			return true;

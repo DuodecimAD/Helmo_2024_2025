@@ -54,8 +54,7 @@ public class Colors {
 		}
 		return Math.round(60 * hue);
 	}
-    
-    //DONE: exercice 2
+
 	public static float getSaturation(int r, int g, int b) {
 		
 	    int cMax = Math.max(Math.max(r, g), b);
@@ -80,7 +79,6 @@ public class Colors {
      * 
      * @return un tableau de 3 flottants {H, S, L}.
      * */
-	// DONE : exercice 7 - 2
     public static float[] toHSL(int r, int g, int b) {
     	r = inRange(r);
     	g = inRange(g);
@@ -88,24 +86,21 @@ public class Colors {
     	
         return new float[] {
                 getHue(r,g,b),
-                getSaturation(r, g, b),//DONE: exercice 4
+                getSaturation(r, g, b),
                 getLightness(r,g,b),
         };
     }
     
-    //DONE: exercice 6
     public static float[] toHSL(int[] rgb) {
         return toHSL(rgb[0], rgb[1], rgb[2]);
     }
     
-    
-    //DONE : exercice 5, définir la fonction
+ 
     public static void getComplementary(float[] tableau) {
     	tableau[0] = (float) (tableau[0] + 180.0) % 360;
     
     }
     
-    // DONE : exercice 7
     public static int inRange(int component) {
     	
 //    	if(component < 0) {

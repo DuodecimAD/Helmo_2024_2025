@@ -1,7 +1,6 @@
 package poo.lecon03;
 
 public enum WeekDay {
-	// DONE exercice 15
 	Monday(0), Friday(4), Tuesday(1), Wednesday(2), Sunday(6), Thursday(3), Saturday(5);
 	
 	private final int weekPos;

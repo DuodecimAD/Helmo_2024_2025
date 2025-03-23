@@ -3,7 +3,7 @@ package poo.labo03;
 import java.util.Arrays;
 import java.util.Objects;
 
-public class WizardHouse {
+public class WizardHouse implements Comparable<WizardHouse>{
 	
 	private final Wizard founder;
 	private Wizard[] membres = new Wizard[1];
@@ -16,7 +16,7 @@ public class WizardHouse {
 		this(wizard, new Wizard[]{});
 	}
 	
-	public WizardHouse(Wizard wizard, Wizard[] members) {
+	public WizardHouse(Wizard wizard, Wizard...members) {
 		this.founder = Objects.requireNonNullElse(wizard, Wizard.YOU_KNOW_WHO);
 		membres = new Wizard[members.length+1];
 		membres[FOUNDER] = this.founder;
@@ -81,7 +81,6 @@ public class WizardHouse {
 		return membresNames;
 	}
 	
-	// TODO : exercice 6 à terminer
 	public void grantPoints(String wizardName, int newPoints) {
 		
 		for (Wizard wizard : membres) {
@@ -92,7 +91,6 @@ public class WizardHouse {
 		}
 		
 	}
-	
 
 	public void setPoints(int points) {
 		this.points = points;
@@ -102,15 +100,15 @@ public class WizardHouse {
 		return points;
 	}
 	
+	@Override
 	public int compareTo(WizardHouse other) {
-		
-		if(this.getPoints() == other.getPoints()) {
-			return this.getName().compareTo(other.getName());
-		} else if(this.getPoints() > other.getPoints()){
-			return 1;
-		} else {
-			return -1;
+
+		int result = this.getPoints() - other.getPoints();
+		if(result == 0) {
+			result = this.getName().compareTo(other.getName());
 		}
+		return result;
 	}
+	
 	
 }

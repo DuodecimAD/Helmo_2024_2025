@@ -1,8 +1,6 @@
 package poo.lecon03;
 
 public class Color {
-	//DONE exercice 05
-	//DONE exercice 12.3
 //	private int r;
 //	private int g;
 //	private int b;
@@ -34,7 +32,6 @@ public class Color {
 		} else {
 			b = 255;
 		}
-		//DONE exercice 13
 		packed = (r << 16) | (g << 8) | b;
 	}
 	
@@ -68,7 +65,6 @@ public class Color {
 		return ((max + min) * 0.5f) / 255;
 	}
 	
-	//DONE exercice 08
 	public String toString() {
 		int red = getR();
 		String redString;
@@ -105,8 +101,7 @@ public class Color {
 		
 		return "Color(r: "+ redString +", g: "+ greenString +", b: "+ blueString +")";
 	}
-	
-	//DONE exercice 09
+
 	public boolean equals(Object o) {
 		if(this == o) {
 			return true;

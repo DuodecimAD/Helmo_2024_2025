@@ -34,7 +34,7 @@ require_once("inc/head.inc.php");
             <h2>Zone A</h2>
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -48,7 +48,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur B</h3>
@@ -62,7 +62,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur C</h3>
@@ -78,7 +78,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur W</h3>
@@ -92,7 +92,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur M</h3>
@@ -106,7 +106,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -120,7 +120,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -134,7 +134,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -148,7 +148,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -162,7 +162,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -176,7 +176,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
@@ -190,7 +190,7 @@ require_once("inc/head.inc.php");
 
             <article>
                 <div>
-                    <img src="images/brocanteur.jpg" alt="brocanteurA">
+                    <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
                 </div>
                 <div>
                     <h3>Brocanteur A</h3>
