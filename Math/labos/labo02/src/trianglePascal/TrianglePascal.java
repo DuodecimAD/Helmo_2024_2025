@@ -63,10 +63,22 @@ public class TrianglePascal {
 		
 		System.out.println("Triangle de Pascal - version itérative");
 		// TODO
+		for (int i = 0; i < 17; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.printf("%5d ", coefficientPascalIteratif(i, j));
+			}
+			System.out.println();
+		}
 		
 		System.out.println();
 		
 		System.out.println("Triangle de Pascal - version récursive");
 		// TODO
+		for (int i = 0; i < 17; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.printf("%5d ", coefficientPascalRecursif(i, j));
+			}
+			System.out.println();
+		}
 	}
 }

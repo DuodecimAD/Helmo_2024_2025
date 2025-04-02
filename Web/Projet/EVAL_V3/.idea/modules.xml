@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/EVAL_PHPSTORM_TEST.iml" filepath="$PROJECT_DIR$/.idea/EVAL_PHPSTORM_TEST.iml" />
       <module fileurl="file://$PROJECT_DIR$/../../Labo/.idea/Labo.iml" filepath="$PROJECT_DIR$/../../Labo/.idea/Labo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../Labo/PHP/cours5/blog-depart/.idea/blog-depart.iml" filepath="$PROJECT_DIR$/../../Labo/PHP/cours5/blog-depart/.idea/blog-depart.iml" />
     </modules>
   </component>
 </project>

@@ -21,22 +21,33 @@ public class BetterIntArray2d extends IntArray2d {
 
 	@Override
 	public int getAt(int row, int col) {
-		int c, r;
+		// TODO comprendre ?
+		int r = row >= 0 ? row : getRowCount() + row;
+		int c = col >= 0 ? col : getColCount() + col;
 		
-		if(col < 0) {
-			c = Objects.checkIndex(col, this.getColCount()-1+col);
-		} else {
-			c = Objects.checkIndex(col, this.getColCount());
-		}
-		
-		if(row < 0) {
-			r = Objects.checkIndex(row, this.getRowCount()-1+row);
-		} else {
-			r = Objects.checkIndex(row, this.getRowCount());
-		}
+//		if(col < 0) {
+//			c = Objects.checkIndex(col, this.getColCount()-1+col);
+//		} else {
+//			c = Objects.checkIndex(col, this.getColCount());
+//		}
+//		
+//		if(row < 0) {
+//			r = Objects.checkIndex(row, this.getRowCount()-1+row);
+//		} else {
+//			r = Objects.checkIndex(row, this.getRowCount());
+//		}
 		
 
-		return getAt(r, c);
+		return super.getAt(r, c);
+	}
+	
+	
+	@Override
+	public void setAt(int row, int col, int value) {
+		int r = row >= 0 ? row : getRowCount() + row;
+		int c = col >= 0 ? col : getColCount() + col;
+		
+		super.setAt(row,  c,  value);
 	}
 
 }

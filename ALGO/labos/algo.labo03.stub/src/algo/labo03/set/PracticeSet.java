@@ -1,6 +1,7 @@
 package algo.labo03.set;
 
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
@@ -22,7 +23,42 @@ public class PracticeSet {
 	 * 🌟 : 1
 	 */
 	public static Set<Integer> symetricDifference(final Set<Integer> s1,final Set<Integer> s2) {
-		return null; // FIXME
+		
+		Set<Integer> intersectInverse = new HashSet<>();
+		if(s1 == null && s2 == null) {
+			return new HashSet<>();
+		} else if(s1 == null) {
+			return s2;
+		} else if(s2 == null) {
+			return s1;
+		}
+		
+		Iterator<Integer> it1 = s1.iterator();
+		Iterator<Integer> it2 = s2.iterator();
+		int nb = -1;
+		while(it1.hasNext() || it2.hasNext()) {
+			
+			if(it1.hasNext()) {
+				nb = it1.next();
+				if(!intersectInverse.contains(nb)) {
+					intersectInverse.add(nb);
+				} else {
+					intersectInverse.remove(nb);
+				}
+			}
+			
+			if(it2.hasNext()) {
+				nb = it2.next();
+				if(!intersectInverse.contains(nb)) {
+					intersectInverse.add(nb);
+				} else {
+					intersectInverse.remove(nb);
+				}
+			}
+		}
+		
+		
+		return intersectInverse;
 	}
 	
 	/**
@@ -44,6 +80,8 @@ public class PracticeSet {
 	 * 🌟 : 1
 	 */
 	public static List<String> ultimateFizzBuzz(List<Integer> candidates, Set<Integer> fizz, Set<Integer> buzz) {
+		
+		
 		return null; // FIXME
 	}
 	

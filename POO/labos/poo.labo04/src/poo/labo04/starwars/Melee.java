@@ -28,7 +28,7 @@ public class Melee {
 	 * Pour chaque combattant, la méthode retourne son nom, sa classe concrète, ses points de vie et ses points de dégâts. 
 	 * */
 	public String[][] getFightersArray() {
-		String[][] array = new String[fighters.size()][4];
+		String[][] array = new String[fighters.size()][];
 		
 		for (int i = 0; i < array.length; i++) {
 			array[i] = new String[] {fighters.get(i).getName(), fighters.get(i).getClass().getSimpleName(), "HP: " + String.valueOf(fighters.get(i).getHP()), "DP: " + String.valueOf(fighters.get(i).getDamagePoints())};
@@ -57,7 +57,11 @@ public class Melee {
 	 * Le paramètre args contient les données nécessaires à la création : le type de combattant souhaité, 
 	 * son nom, ses points de vie et de dégâts. 
 	 * */
-	public void addFighter(AddFighterRequest args) {	
+	public void addFighter(AddFighterRequest args) {
+		
+		// switch(args.getKind()){
+		//case default -> throw new IllegalArgumentException((args.getKind() + "is not supported");
+		//}
 		if(JEDI.equals(args.getKind())) {
 			fighters.add(new Jedi(args.getName(), args.getHitPoints(), args.getDamagePoints()));
 		} else {
@@ -92,17 +96,18 @@ public class Melee {
 				ifAttackerIsSith(rand, firstPickIndex);
 			}
 			
-			ifOneAlive();
+			ifTargetAlive();
 		}
 
 	}
 
-	private void ifOneAlive() {
+	private void ifTargetAlive() {
 		if(getAlivesCount() <= 1) {
 			message += " Le vainqueur est " + getFightersArray()[0][0] + " !";
 		}
 	}
 
+	// trop long, prof a fait un simple get
 	private void ifAttackerIsSith(Random rand, int firstPickIndex) {
 		Sith attacker = (Sith) fighters.get(firstPickIndex);
 		

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="dc0964d0-5655-41aa-96d3-9d1266f4d847" name="HELmo Panoramix" url="http://192.168.132.203">
-        <fileTransfer rootFolder="/public_html" host="192.168.132.203" port="21">
+      <webServer id="dc0964d0-5655-41aa-96d3-9d1266f4d847" name="HELmo Panoramix" url="192.168.132.203/q240183">
+        <fileTransfer rootFolder="/home/q240183/public_html" accessType="SFTP" host="192.168.132.203" port="22" sshConfigId="43f9c642-4d08-411c-9a3a-9448a1329366" sshConfig="q240183@192.168.132.203 -p 22">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
       <webServer id="0364a0dc-eaef-40a3-a8ec-77ad87b98fa3" name="localhost" url="http://localhost">
-        <fileTransfer mountedRoot="E:\OneDrive - student.helmo.be\Helmo\DevApp\Bloc1\2024-2025\Web\Projet\EVAL_V2" accessType="MOUNT" port="0" />
+        <fileTransfer mountedRoot="E:\OneDrive - student.helmo.be\Helmo\DevApp\Bloc1\2024-2025\GIT\Web\Projet\EVAL_V3" accessType="MOUNT" port="0" />
       </webServer>
     </option>
   </component>

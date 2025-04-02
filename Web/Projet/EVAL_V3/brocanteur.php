@@ -1,43 +1,33 @@
-<?php
-session_start();
-?>
-
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/php/controller.brocanteur.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
-
-<?php
-$title = "BrocanteurA";
-require_once("inc/head.inc.php");
-?>
-
+<?php $title = "Brocanteur $prenom $nom"; include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/head.inc.php'; ?>
 <body>
-    <?php require_once("inc/header.inc.php"); ?>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/header.inc.php'; ?>
 
-    <main id="Brocanteur" class="max-width">
+    <main id="Brocanteur" class="max-width" style="min-height: 30em;">
         <section id="BrocanteurProfil" class="boite">
             <div>
-                <img src="assets/images/brocanteur.jpg" alt="brocanteurA">
+                <img src="<?= $photo ?>" alt="<?= $prenom . '_' . $nom . '_avatar' ?>">
             </div>
 
             <div>
-                <h1>Brocanteur A</h1>
-                <p>Emplacement : 0013 - Zone A</p>
-                <p>Expérience : 12 ans</p>
-                <p>Participations : 25</p>
-                <p style="text-align: justify">"Brocanteur A considère la vente de distributeurs PEZ
-                    comme un rêve devenu réalité. Toujours en quête de pièces
-                    rares, il perçoit cette activité comme une véritable chasse
-                    au trésor, lui permettant de rester dynamique tout en gagnant
-                    sa vie."</p>
+                <h1><?= $prenom . ' ' . $nom ?></h1>
+                <p>Emplacement : <?= $codeEmplacement ?></p>
+                <p>Zone : <?= $zoneName ?></p>
+                <p style="text-align: justify">Description : <br><?= $description ?></p>
             </div>
         </section>
 
-        <h2>Objets référencés par Brocanteur A</h2>
-
-        <?php require_once ("inc/objetsList.inc.php"); ?>
+        <h2>Objets en vente chez <?= $prenom . ' ' . $nom ?></h2>
+        <section id="Objets_list" class="boite">
+            <?php foreach($objetsFromUser as $eachObjet){ ?>
+                <?php include $_SERVER['DOCUMENT_ROOT'] . '/inc/objetsList.inc.php'; ?>
+            <?php } ?>
+        </section>
     </main>
 
-    <?php require_once("inc/footer.inc.php"); ?>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.inc.php'; ?>
 
 </body>
 </html>

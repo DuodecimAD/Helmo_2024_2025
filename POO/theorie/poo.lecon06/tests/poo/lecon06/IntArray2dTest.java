@@ -68,7 +68,7 @@ class IntArray2dTest {
 	}
 	
 	@Test
-	void SetsWithNegativeIndex() { // TODO
+	void SetsWithNegativeIndex() { // FIXME
 		var array = new BetterIntArray2d(IntArray2d.MAX_INDEX, IntArray2d.MAX_INDEX);
 		var randomIndex = (int)(Math.random()*IntArray2d.MAX_INDEX);
 		
@@ -96,7 +96,7 @@ class IntArray2dTest {
 	
 	@Test
 	void GetsWithNegativeIndex() { // TODO
-		var array = new IntArray2d(IntArray2d.MAX_INDEX, IntArray2d.MAX_INDEX);
+		var array = new BetterIntArray2d(IntArray2d.MAX_INDEX, IntArray2d.MAX_INDEX);
 		var randomIndex = (int)(Math.random()*IntArray2d.MAX_INDEX);
 		
 		array.setAt(array.getRowCount()-1, array.getColCount()-1, 42);

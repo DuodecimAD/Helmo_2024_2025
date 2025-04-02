@@ -2,6 +2,7 @@ package algo.labo03.queue;
 
 import java.util.Deque;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Objects;
 import java.util.Queue;
 import java.util.Set;
@@ -27,8 +28,32 @@ public class PracticeQueue {
 	 * 🌟 : 1
 	 */
 	public static boolean equals(final Queue<Integer> q1, final Queue<Integer> q2) {
-		return false; // FIXME
+		if(q1 == null && q2 == null) {
+			return true;
+		} else if(q1 == null || q2 == null) {
+			// Inégalité à null (une file et null ne sont pas égales)
+			return false;
+		} else if(q1.size() != q2.size()) {
+			return false;
+		} else if(q1.equals(q2)) {
+			return true;
+		} else if (q1.isEmpty() && q2.isEmpty()) {
+			return true;
+		}
+		
+		Iterator<Integer> it1 = q1.iterator();
+		Iterator<Integer> it2 = q2.iterator();
+		
+		while (it1.hasNext()) {
+			if(it1.next() != it2.next()) {
+				return false;
+			}
+		}
+
+		return true; 
 	}
+	
+	
 	
 	/**
 	 * Filtre tous les éléments de la file et ne laisse que les éléments pairs.
@@ -38,7 +63,25 @@ public class PracticeQueue {
 	 * 🌟 : 1
 	 */
 	public static Queue<Integer> even(final Queue<Integer> queue) {
-		return null; // FIXME
+		
+		if(queue == null) {
+			throw new NullPointerException();
+		} else if (queue.size() == 1) {
+			return queue;
+		}
+		
+		Iterator<Integer> it = queue.iterator();
+		
+		int counter = 0;
+		while(it.hasNext()) {
+			it.next();
+			if (counter % 2 == 0){
+				it.remove();
+			}
+			counter++;
+		}
+
+		return queue; // FIXME
 	}
 	
 	/**
@@ -48,6 +91,20 @@ public class PracticeQueue {
 	 * 🌟 : 2
 	 */
 	public static Queue<String> unique(final Queue<String> queue) {
-		return null; // FIXME
+		
+		Set<String> unique = new HashSet<>();
+		
+		Iterator<String> it = queue.iterator();
+
+		while(it.hasNext()) {
+			String next = it.next();
+			if(!unique.contains(next)) {
+				unique.add(next);
+			} else {
+				it.remove();
+			}
+		}
+		
+		return queue; // FIXME
 	}
 }

@@ -1,3 +1,5 @@
+<?php //echo "<br><p>(debug in header.inc.php) var_dump(\$_SESSION) : </p>"; var_dump($_SESSION); echo "<br>"; ?>
+
 <?php
 if (!isset($_SESSION['user']['loggedIn']) || !$_SESSION['user']['loggedIn']) {
     echo '<a href="login.php" id="loginButton">Me connecter</a>';
@@ -7,47 +9,37 @@ if (!isset($_SESSION['user']['loggedIn']) || !$_SESSION['user']['loggedIn']) {
         <div id="userInfos">
             <img src="<?php echo $_SESSION['user']['photo']; ?>" alt="photo">
 
-            <?php
-                if($_SESSION['user']['est_administrateur'] === 0) {
-                    echo "<a href=\"espaceBrocanteur.php\">" . $_SESSION['user']['courriel'] . "</a>";
-                } else {
-                    echo "<a href=\"espaceAdmin.php\">" . $_SESSION['user']['courriel'] . "</a>";
-                }
-            ?>
+            <?php if($_SESSION['user']['est_administrateur'] === false) { ?>
+                <a href="espaceBrocanteur.php"><?= $_SESSION['user']['courriel'] ?></a>
+            <?php } else { ?>
+                <a href="espaceAdmin.php"><?= $_SESSION['user']['courriel'] ?></a>
+            <?php } ?>
         </div>
 
         <a href="logout.php">Me déconnecter</a>
     </div>
 
-<?php
-}
-
-//$_SESSION = [];
-var_dump($_SESSION);
-
-?>
+<?php } ?>
 
 <header id="headerPage">
-    <img src="assets/images/logo.svg" alt="PEZBroc" >
+    <img src="images/logo.svg" alt="PEZBroc" >
 </header>
 
 <nav>
     <ul>
-        <li><a href="index.php" <?php if($title == "Accueil") { echo "class=\"active\"";} ?>>Accueil</a></li>
-        <li><a href="contact.php" <?php if($title == "Contact") { echo "class=\"active\"";} ?>>Contact</a></li>
-        <li><a href="brocanteurs.php" <?php if($title == "Brocanteurs") { echo "class=\"active\"";} ?>>Brocanteurs</a></li>
-        <li><a href="objets.php" <?php if($title == "Objets") { echo "class=\"active\"";} ?>>Objets</a></li>
+        <li><a href="index.php" <?php if($title == "Accueil") { ?> class="active" <?php } ?>>Accueil</a></li>
+        <li><a href="contact.php" <?php if($title == "Contact") { ?>  class="active" <?php } ?>>Contact</a></li>
+        <li><a href="brocanteurs.php" <?php if($title == "Brocanteurs") { ?>  class="active" <?php } ?>>Brocanteurs</a></li>
+        <li><a href="objets.php" <?php if($title == "Objets") { ?>  class="active" <?php } ?>>Objets</a></li>
 
-        <?php
-            if(!isset($_SESSION['user']['loggedIn']) || !$_SESSION['user']['loggedIn']) {
-                echo "<li><a href=\"inscription.php\"";
-
-                if ($title == "M'inscrire") {
-                    echo " class=\"active\"";
-                }
-
-                echo ">M'inscrire</a></li>";
-            }
-        ?>
+        <?php if(!isset($_SESSION['user'])) { ?>
+        <li><a href="inscription.php" <?php if($title == "Inscription") { ?>  class="active" <?php } ?>>M'inscrire</a></li>
+        <?php } else {
+            if($_SESSION['user']['est_administrateur'] === false) { ?>
+                <li><a href="espaceBrocanteur.php"<?php if($title == "Espace Brocanteur") { ?>  class="active" <?php } ?>>Mon Espace</a></li>
+            <?php } else { ?>
+                <li><a href="espaceAdmin.php"<?php if($title == "Espace Administrateur") { ?>  class="active" <?php } ?>>Mon Espace</a></li>
+            <?php }
+        } ?>
     </ul>
 </nav>

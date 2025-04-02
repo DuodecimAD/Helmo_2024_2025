@@ -1,7 +1,7 @@
 
 <footer>
     <div class="max-width">
-        <p>Antony Dekens - BI6 - Helmo - 2024-2025</p>
+        <p>DuodecimAD - BI6 - Helmo - 2024-2025</p>
         <p>
             Images of PEZ dispensers used on this website are the property of their respective owners.
             <br>They were sourced from

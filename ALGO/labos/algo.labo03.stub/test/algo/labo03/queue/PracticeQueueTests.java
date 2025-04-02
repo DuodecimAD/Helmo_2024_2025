@@ -59,4 +59,26 @@ class PracticeQueueTests {
 				Arguments.of(new ArrayDeque<String>(), new ArrayDeque<String>())
 				);
 	}
+
+	@ParameterizedTest
+	@MethodSource("provideQueueForEquals")
+	void equalsExamples(boolean expected, Queue<Integer> input1, Queue<Integer> input2) {
+		assertEquals(expected, PracticeQueue.equals(input1,input2));
+	}
+
+	private static Stream<Arguments> provideQueueForEquals() {
+		return Stream.of(
+				Arguments.of(false, new ArrayDeque<>(List.of(2,4)), new ArrayDeque<>(List.of(1,2,3,4,5))),
+				Arguments.of(false, new ArrayDeque<>(List.of(2,4)), new ArrayDeque<>(List.of(2,4,3,1))),
+				Arguments.of(true, new ArrayDeque<>(List.of(2,1)), new ArrayDeque<>(List.of(2,1))),
+				Arguments.of(false, new ArrayDeque<>(List.of(2, 1)), new ArrayDeque<>(List.of(1,2))),
+				Arguments.of(true, new ArrayDeque<>(List.of(0)), new ArrayDeque<>(List.of(0))),
+				Arguments.of(false, new ArrayDeque<>(List.of(0)), new ArrayDeque<>(List.of(0,1))),
+				Arguments.of(false, new ArrayDeque<>(List.of(0,1)), new ArrayDeque<>(List.of(0))),
+				Arguments.of(true, new ArrayDeque<>(), new ArrayDeque<>()),
+				Arguments.of(false, new ArrayDeque<>(List.of(2,4,6)), null),
+				Arguments.of(false, null, new ArrayDeque<>(List.of(2,4,6))),
+				Arguments.of(true, null, null)
+				);
+	}
 }

@@ -1,6 +1,10 @@
 package jeu;
 
-
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.stream.Collectors;
 
 public class LeCompteEstBon {
 	
@@ -70,7 +74,6 @@ public class LeCompteEstBon {
      */
     private static int calculer(int nombre1, int nombre2, char operation) {
     	
-    	
     	switch (operation) {
 			case '-': return nombre1 - nombre2;
 			case '*': return nombre1 * nombre2;
@@ -84,7 +87,6 @@ public class LeCompteEstBon {
 				
 			default: return -1;
 		}
- 
     }
     
 
@@ -95,17 +97,23 @@ public class LeCompteEstBon {
      * @return le tableau contenant les 'nombre' nombres sélectionnés
      */
     private static int[] tirageNombres(int[] listeNombres, int nombre) {
-    	
-        // TODO
-    	
-        return new int[] {};
+    	Random ran = new Random();
+    	for (int i = 0; i < 6; i++) {
+			int pos = ran.nextInt(i, listeNombres.length);
+			int temp = listeNombres[pos];
+			listeNombres[pos] = listeNombres[i];
+			listeNombres[i] = temp;
+		}
+        
+        return Arrays.copyOf(listeNombres, 6);
     }
     
       
     public static void main(String[] args) {
+    	int[] listeNombres = {1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,25,50,75,100};
     	
-    	// TODO
-    	int[] nombresDepart = {3, 6, 25, 50, 75, 100};
+    	//int[] nombresDepart = {3, 6, 25, 50, 75, 100};
+    	int[] nombresDepart = tirageNombres(listeNombres, 6);
     	int nombreRecherche = 952;
     	String solution = solveur(nombresDepart, nombreRecherche);
     	if (solution != null) {

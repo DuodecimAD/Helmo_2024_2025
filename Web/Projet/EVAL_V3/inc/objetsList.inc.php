@@ -1,90 +1,10 @@
+<article <?php if(basename($_SERVER['PHP_SELF']) === "index.php"){ echo 'class="boite"'; }?>>
+    <img src="<?= nettoyage_from_db($eachObjet['image']) ?>" alt="<?= nettoyage_from_db($eachObjet['intitule']) ?>">
+    <h3><?= nettoyage_from_db($eachObjet['intitule']) ?></h3>
+    <?php if(basename($_SERVER['PHP_SELF']) === "espaceBrocanteur.php"){ ?>
+        <a href="<?= nettoyage_to_db($_SERVER['PHP_SELF']) ?>?modif&oid=<?= nettoyage_from_db($eachObjet['oid']) ?>">Modifier</a>
+    <?php } else { ?>
+        <a href="objet.php?oid=<?= nettoyage_from_db($eachObjet['oid']) ?>">Voir</a>
+    <?php } ?>
+</article>
 
-
-<section id="Objets_list" class="boite">
-
-    <h2>Catégorie Drôle</h2>
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <h2>Catégorie Légendaire</h2>
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-
-    <article>
-        <img src="assets/images/D-09636-0001.jpg" alt="Lampo PEZ">
-        <h3>Lampo</h3>
-        <a href="objet.php">Voir</a>
-    </article>
-</section>

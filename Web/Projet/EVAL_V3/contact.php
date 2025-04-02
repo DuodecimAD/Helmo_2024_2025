@@ -1,36 +1,43 @@
-<?php
-session_start();
-?>
-
+<?php require_once $_SERVER['DOCUMENT_ROOT'] . '/php/controller.contact.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
-
-<?php
-$title = "Contact";
-require_once("inc/head.inc.php");
-?>
-
+<?php $title = "Contact"; include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/head.inc.php'; ?>
 <body>
-    <?php require_once("inc/header.inc.php"); ?>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/header.inc.php'; ?>
 
     <main class="max-width">
         <h1>Contact</h1>
-        <form action="#" method="post" id="contact_form" class="boite">
 
-            <label for="sujet">Sujet *</label>
-            <input type="text" name="sujet" id="sujet" required placeholder="Entrez le sujet de votre message">
+        <?php if(isset($success)) { ?>
+            <section>
+                <p style="background-color: #c4f7c1; padding: 2em;">Votre message a été envoyé avec succès</p>
+            </section>
 
-            <label for="email">Email *</label>
-            <input type="email" name="email" id="email" required placeholder="Entrez votre email">
+        <?php } else { ?>
 
-            <label for="message">Message *</label>
-            <textarea name="message" id="message" rows="17" cols="75" required placeholder="Entrez votre message"></textarea>
+            <form action="<?= nettoyage_to_db($_SERVER['PHP_SELF']) ?>" method="post" id="contact_form" class="boite">
 
-            <button type="submit" name="submit">Envoyer</button>
-        </form>
+                <label for="email">Email *</label>
+                <input type="email" name="email" id="email" required placeholder="Entrez votre email"
+                       value="<?php if(isset($sujetEmail)){ echo $sujetEmail; } else if(isset($_SESSION['user']['courriel'])){ echo $_SESSION['user']['courriel']; } ?>">
+
+                <label for="sujet">Sujet *</label>
+                <input type="text" name="sujet" id="sujet" required placeholder="Entrez le sujet de votre message" value="<?php if(isset($sujet)){ echo $sujet; } ?>">
+
+                <label for="message">Message *</label>
+                <textarea name="message" id="message" rows="17" cols="75" required placeholder="Entrez votre message"><?php if(isset($content)){ echo $content; } ?></textarea>
+
+                <button type="submit" name="submit">Envoyer</button>
+                <?php if(isset($errorMessage)) { ?>
+                    <p class="errorMessage"><?= nettoyage_from_db($errorMessage) ?></p>
+                <?php } ?>
+            </form>
+
+        <?php } ?>
+
     </main>
 
-    <?php require_once("inc/footer.inc.php"); ?>
+    <?php include_once $_SERVER['DOCUMENT_ROOT'] . '/inc/footer.inc.php'; ?>
 
 </body>
 </html>
