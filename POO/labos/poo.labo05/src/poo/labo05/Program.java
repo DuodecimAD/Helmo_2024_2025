@@ -13,17 +13,23 @@ import poo.labo05.views.SwingBarControlView;
  * This program handles a wine bottles stock.
  * */
 public class Program {
+	private static final String FRANCE = "France";
+
+	/**
+	 * 
+	 * @param args
+	 */
     public static void main(String[] args) {
         List<WineBottle> bottles = new ArrayList<>();
 
         // putting wine bottles in the stock
-        putInStock(bottles, new Wine("Château Margaux", "France", 2015, "Cabernet Sauvignon, Merlot"), 1950.0, 1);
+        putInStock(bottles, new Wine("Château Margaux", FRANCE, 2015, "Cabernet Sauvignon, Merlot"), 1950.0, 1);
         putInStock(bottles, new Wine("Barolo", "Italie", 2012, "Nebbiolo"), 120.0, 2);
-        putInStock(bottles, new Wine("Châteauneuf-du-Pape", "France", 2018, "Grenache, Syrah, Mourvèdre"), 80.0, 3);
+        putInStock(bottles, new Wine("Châteauneuf-du-Pape", FRANCE, 2018, "Grenache, Syrah, Mourvèdre"), 80.0, 3);
         putInStock(bottles, new Wine("Brunello di Montalcino", "Italie", 2016, "Sangiovese"), 150.0, 2);
         putInStock(bottles, new Wine("Rioja Reserva", "Espagne", 2014, "Tempranillo"), 50.0, 4);
-        putInStock(bottles, new Wine("Pinot Noir", "France", 2017, "Pinot Noir"), 70.0, 3);
-        putInStock(bottles, new Wine("Sancerre", "France", 2019, "Sauvignon Blanc"), 40.0, 4);
+        putInStock(bottles, new Wine("Pinot Noir", FRANCE, 2017, "Pinot Noir"), 70.0, 3);
+        putInStock(bottles, new Wine("Sancerre", FRANCE, 2019, "Sauvignon Blanc"), 40.0, 4);
         putInStock(bottles, new Wine("Amarone della Valpolicella", "Italie", 2013, "Corvina, Rondinella"), 90.0, 3);
         putInStock(bottles, new Wine("Saint Felicien Malbec", "Argentine", 2020, "Malbec"), 25.0, 4);
         putInStock(bottles, new Wine("Chardonnay", "États-Unis", 2018, "Chardonnay"), 35.0, 4);
@@ -40,6 +46,13 @@ public class Program {
         });
     }
     
+    /**
+     * 
+     * @param stock
+     * @param wine
+     * @param purchasePrice
+     * @param bottlesCount
+     */
     public static void putInStock(List<WineBottle> stock, 
     		Wine wine, double purchasePrice, int bottlesCount) {
   

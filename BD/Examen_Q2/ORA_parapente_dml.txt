@@ -1,0 +1,123 @@
+DELETE FROM REPARATION;
+DELETE FROM VOL;
+DELETE FROM VOILE;
+DELETE FROM MODELEVOILE;
+DELETE FROM DEPARTARRIVEE;
+DELETE FROM SITEDEPART;
+DELETE FROM SITEARRIVEE;
+DELETE FROM MONITEUR;
+DELETE FROM MEMBRE;
+DELETE FROM NIVEAU;
+-------------------------------------------------------
+INSERT INTO NIVEAU VALUES (1,'Poussin');
+INSERT INTO NIVEAU VALUES (2,'Moineau');
+INSERT INTO NIVEAU VALUES (3,'Colombe');
+INSERT INTO NIVEAU VALUES (4,'Epervier');
+INSERT INTO NIVEAU VALUES (5,'Aigle');
+
+-------------------------------------------------------
+INSERT INTO MEMBRE VALUES ('201504H0000018', 'Dupont', 'Roger', 'duro@gmail.com', '04/351.23.56', TO_DATE('01051985','ddmmyyyy'), 85, 'rue des acacias', '45', 'Liège', 4000, 1);
+INSERT INTO MEMBRE VALUES ('201501F0000027', 'Durant', 'Sylvie', 'sylvie82@gmail.com', '02/261.23.98', TO_DATE('13061982','ddmmyyyy'), 65, 'rue des tulipes', '5A', 'Bruxelles', 1000, 2);
+INSERT INTO MEMBRE VALUES ('201508F0000034', 'Van Heuvel', 'Kathy', 'kvh@yahoo.com', '03/251.74.74', null, 59, 'Hoogstraat', '45', 'Anvers', 2000, 3);
+INSERT INTO MEMBRE VALUES ('201504H0000044', 'Dupond', 'Alex', 'alex.dupond@skynet.be', '04/221.21.22', TO_DATE('26021995','ddmmyyyy'), 71, 'rue des paquerettes', '25', 'Liège', 4000, 4);
+INSERT INTO MEMBRE VALUES ('201607F0000014', 'Durand', 'Nathalie', 'nath71@yahoo.fr',  '0495/51.78.91', TO_DATE('1101971','ddmmyyyy'), 62, 'Tulipenweg', '145', 'Heusden', 3920, 5);
+INSERT INTO MEMBRE VALUES ('201605H0000027', 'Preskovitch', 'Zadko', 'preskof@yahoo.com', '068/71.12.87', null, 91, 'rue du muguet', '2c', 'Neufchâteau', 6840, 1);
+INSERT INTO MEMBRE VALUES ('201803F0000016', 'de Monsou', 'Thérèse', 'therese@gmail.com', '0495/32.23.32', TO_DATE('23061974','ddmmyyyy'), 65, 'rue des miosotys', '65', 'Dinant', 5500, 1);
+INSERT INTO MEMBRE VALUES ('201803H0000024', 'Mortez', 'Pierre', 'pmortez@gmail.com', '0476/62.65.31', TO_DATE('12121971','ddmmyyyy'), 85, 'rue des tournesols', '5', 'Auvelais', 5060, 2);
+INSERT INTO MEMBRE VALUES ('201904H0000017', 'Brochant', 'Pierre', 'pbr@ddc.be', '0474/26.12.51', TO_DATE('29031971','ddmmyyyy'), 82, 'allée des pétunias', '95', 'Visé', 4600, 5);
+INSERT INTO MEMBRE VALUES ('201909F0000029', 'Derijk', 'Petra', 'pdr@gmail.com', '0498/97.55.64', TO_DATE('08011975','ddmmyyyy'), 49,'Bloemstraat', '85', 'Bruges', 8000, 1);
+INSERT INTO MEMBRE VALUES ('201605F0000028', 'Preskovitch', 'Juliana', 'preskoj@yahoo.com', '068/71.12.87', null, 72, 'rue du muguet', '2c', 'Neufchâteau', 6840, 1);
+INSERT INTO MEMBRE VALUES ('201904H0000018', 'Brochant', 'Marc', 'mbr@ddc.be', '0474/36.18.51', TO_DATE('16051978','ddmmyyyy'), 84, 'rue des rosiers', '45', 'Visé', 4600, 5);
+---------------------------------------------------------
+INSERT INTO MONITEUR VALUES ('201304H0000018', 'Dugont', 'Robert', 'dugo@gmail.com', '04/251.23.56', TO_DATE('01061980','ddmmyyyy'), 96, 'rue du chêne', '4', 'Liège', 4000);
+INSERT INTO MONITEUR VALUES ('201501F0000057', 'Dufrant', 'Sophie', 'sophie80@gmail.com', '02/251.53.58', TO_DATE('13061980','ddmmyyyy'), 75, 'rue des aulnes', '12A', 'Bruxelles', 1000);
+INSERT INTO MONITEUR VALUES ('201508F0000060', 'Van Deurne', 'Katherina', 'kvd@gmail.com', '03/481.77.98', null, 51, 'Ormestraat', '77', 'Anvers', 2000);
+INSERT INTO MONITEUR VALUES ('201504H0000071', 'Casey', 'Sam', 'invisible.man@yahoo.be', '04/222.64.28', TO_DATE('20021985','ddmmyyyy'), 81, 'rue des pins', '25', 'Liège', 4000);
+INSERT INTO MONITEUR VALUES ('201607F0000036', 'Duxhand', 'Nathalia', 'nathdux@gmail.com',  '0495/79.78.64', TO_DATE('11091975','ddmmyyyy'), 62, 'Braumweg', '475', 'Heusden', 3920);
+INSERT INTO MONITEUR VALUES ('201504F0000085', 'Casey', 'Rosalyne', 'invisible.woman@yahoo.be', '04/222.64.28', null, 68, 'rue des pins', '25', 'Liège', 4000);
+INSERT INTO MONITEUR VALUES ('201604F0000045', 'Stury', 'John', 'fabulousjohn@yahoo.be', '0495/22.34.28', TO_DATE('16091980','ddmmyyyy'), 74, 'rue des ormes', '2A', 'Liège', 4000);
+---------------------------------------------------------
+INSERT INTO SITEDEPART VALUES (1, 'Plateau de chagnes', 2150, 13.5);
+INSERT INTO SITEDEPART VALUES (2, 'Pic du malais', 1850, 11.5);
+INSERT INTO SITEDEPART VALUES (3, 'Cabane du berger', 2220, 15.5);
+INSERT INTO SITEDEPART VALUES (4, 'Les huchons', 1750, 9.5);
+INSERT INTO SITEDEPART VALUES (5, 'Croix du montagnard', 1950, 8.5);
+INSERT INTO SITEDEPART VALUES (6, 'Plateau de belleville', 2230, 18.5);
+INSERT INTO SITEDEPART VALUES (7, 'Mont-rouge', 1825, 13.5);
+INSERT INTO SITEDEPART VALUES (8, 'Point de vue des bouquetins', 1690, 7.5);
+INSERT INTO SITEDEPART VALUES (9, 'Le refuge du berger', 1890, 12.5);
+---------------------------------------------------------
+INSERT INTO SITEARRIVEE VALUES (1, 'Plaine des boucs', 1150, 0.5);
+INSERT INTO SITEARRIVEE VALUES (2, 'Prairie Chenez', 1250, 2.5);
+INSERT INTO SITEARRIVEE VALUES (3, 'Le pré du lac', 980, 6.5);
+INSERT INTO SITEARRIVEE VALUES (4, 'Prairie Valsoys', 1100, 4.5);
+INSERT INTO SITEARRIVEE VALUES (5, 'Pré Calmont', 1210, 0);
+INSERT INTO SITEARRIVEE VALUES (6, 'Pré Vardinin', 1200, 3.5);
+---------------------------------------------------------
+INSERT INTO DEPARTARRIVEE VALUES (1,1);
+INSERT INTO DEPARTARRIVEE VALUES (1,2);
+INSERT INTO DEPARTARRIVEE VALUES (1,3);
+INSERT INTO DEPARTARRIVEE VALUES (2,1);
+INSERT INTO DEPARTARRIVEE VALUES (2,3);
+INSERT INTO DEPARTARRIVEE VALUES (2,4);
+INSERT INTO DEPARTARRIVEE VALUES (3,1);
+INSERT INTO DEPARTARRIVEE VALUES (4,5);
+INSERT INTO DEPARTARRIVEE VALUES (5,1);
+INSERT INTO DEPARTARRIVEE VALUES (5,5);
+INSERT INTO DEPARTARRIVEE VALUES (6,1);
+INSERT INTO DEPARTARRIVEE VALUES (6,3);
+INSERT INTO DEPARTARRIVEE VALUES (6,4);
+INSERT INTO DEPARTARRIVEE VALUES (7,3);
+INSERT INTO DEPARTARRIVEE VALUES (7,4);
+INSERT INTO DEPARTARRIVEE VALUES (7,5);
+---------------------------------------------------------
+INSERT INTO MODELEVOILE VALUES (1, 'FlyHigh', 'MX-200', 'S', 120);
+INSERT INTO MODELEVOILE VALUES (2, 'FlyHigh', 'Proglide 650', 'S', 140);
+INSERT INTO MODELEVOILE VALUES (3, 'Oakley', 'Eagle RX5', 'D', 180);
+INSERT INTO MODELEVOILE VALUES (4, 'Oakley', 'Eagle RX7', 'D', 220);
+INSERT INTO MODELEVOILE VALUES (5, 'Kronik', 'Base 400', 'S', 90);
+INSERT INTO MODELEVOILE VALUES (6, 'Seagull', 'Custom 45R', 'S', 100);
+---------------------------------------------------------
+INSERT INTO VOILE VALUES (1, TO_DATE('01052012','ddmmyyyy'), 'bleu','H', 1);
+INSERT INTO VOILE VALUES (2, TO_DATE('01052012','ddmmyyyy'), 'blanc','B', 2);
+INSERT INTO VOILE VALUES (3, TO_DATE('01092014','ddmmyyyy'), 'jaune','B', 2);
+INSERT INTO VOILE VALUES (4, TO_DATE('01102014','ddmmyyyy'), 'violet','R', 3);
+INSERT INTO VOILE VALUES (5, TO_DATE('01102014','ddmmyyyy'), 'blanc','B', 3);
+INSERT INTO VOILE VALUES (6, TO_DATE('01052018','ddmmyyyy'), 'blanc','B', 3);
+INSERT INTO VOILE VALUES (7, TO_DATE('01052018','ddmmyyyy'), 'bleu','R', 4);
+INSERT INTO VOILE VALUES (8, TO_DATE('01122018','ddmmyyyy'), 'rouge','B', 5);
+INSERT INTO VOILE VALUES (9, TO_DATE('01052019','ddmmyyyy'), 'bleu','T', 5);
+INSERT INTO VOILE VALUES (10, TO_DATE('01052019','ddmmyyyy'), 'vert','T', 5);
+INSERT INTO VOILE VALUES (11, TO_DATE('01052014','ddmmyyyy'), 'mauve','T', 5);
+INSERT INTO VOILE VALUES (12, TO_DATE('01052012','ddmmyyyy'), 'rouge','T', 2);
+INSERT INTO VOILE VALUES (13, TO_DATE('01052012','ddmmyyyy'), 'mauve','T', 1);
+INSERT INTO VOILE VALUES (14, TO_DATE('01052019','ddmmyyyy'), 'mauve','T', 5);
+--------------------------------------------------------
+INSERT INTO VOL VALUES (1, TO_DATE('15062015 14:30','ddmmyyyy hh24:mi'),120, 'T', TO_DATE('08062015','ddmmyyyy'), '201504H0000018', '201304H0000018', 4, 1,1);
+
+INSERT INTO VOL VALUES (2, TO_DATE('22062015 16:00 ','ddmmyyyy hh24:mi'),60, 'T', TO_DATE('15062015','ddmmyyyy'), '201501F0000027', null, 1, 1,2);
+
+INSERT INTO VOL VALUES (3, TO_DATE('22082016 11:00','ddmmyyyy hh24:mi'),120, 'A', TO_DATE('15082016','ddmmyyyy'), '201504H0000044', null, 3, 3,1);
+
+INSERT INTO VOL VALUES (4, TO_DATE('15072018 10:00','ddmmyyyy hh24:mi'),140, 'T', TO_DATE('15052018','ddmmyyyy'), '201607F0000014', '201501F0000057', 6, 5,5);
+
+INSERT INTO VOL VALUES (5, TO_DATE('11032021 16:00','ddmmyyyy hh24:mi'),80, 'P', TO_DATE('21122020','ddmmyyyy'), '201605H0000027', null, 5, 6,1);
+
+INSERT INTO VOL VALUES (6, TO_DATE('15072021 14:00','ddmmyyyy hh24:mi'),80, 'P', TO_DATE('24122020','ddmmyyyy'), '201605H0000027', null, 3, 5,5);
+
+INSERT INTO VOL VALUES (7, TO_DATE('08022021 10:00','ddmmyyyy hh24:mi'),120, 'P', TO_DATE('27122020','ddmmyyyy'), '201607F0000014', '201304H0000018', 5, 2,4);
+
+INSERT INTO VOL VALUES (8, TO_DATE('08092020 16:00','ddmmyyyy hh24:mi'),120, 'T', TO_DATE('10082020','ddmmyyyy'), '201508F0000034', '201501F0000057', 5, 2,5);
+
+--------------------------------------------------------
+INSERT INTO REPARATION VALUES (1, 'Déchirure au niveau du tube 4', TO_DATE('22082015','ddmmyyyy'), 3, TO_DATE('26082015','ddmmyyyy'), 2);
+INSERT INTO REPARATION VALUES (2, 'Remplacement des tendeurs extérieurs', TO_DATE('20092015','ddmmyyyy'), 10, TO_DATE('05102015','ddmmyyyy'), 3);
+INSERT INTO REPARATION VALUES (3, 'Usure des sangles de soutien', TO_DATE('12052016','ddmmyyyy'), 4, TO_DATE('17052016','ddmmyyyy'), 3);
+INSERT INTO REPARATION VALUES (4, 'Usure du tournet gauche.', TO_DATE('12082016','ddmmyyyy'), 10, TO_DATE('20082016','ddmmyyyy'), 6);
+INSERT INTO REPARATION VALUES (5, 'Tension insuffisante au niveau des palants arrières', TO_DATE('12052020','ddmmyyyy'), 15, null, 4);
+INSERT INTO REPARATION VALUES (6, 'Déchirure au niveau des tubes 6 et 7', TO_DATE('24082020','ddmmyyyy'), 5, null, 7);
+--------------------------------------------------------
+COMMIT;
+
+
+

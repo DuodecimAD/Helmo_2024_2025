@@ -28,7 +28,6 @@ public class SommeNombresImpairs {
 	 */
 	public static int sommeNombresImpairsIteratif(int n) {
 		
-		// DONE
 		if(n <= 0) {
 			throw new IllegalArgumentException("erreur");
 		}
@@ -50,7 +49,7 @@ public class SommeNombresImpairs {
 	 * @return la somme demandée
 	 */
 	public static int sommeNombresImpairsRecursif(int n) {
-		// DONE
+
 		if(n <= 0) {
 			throw new IllegalArgumentException("erreur");
 		} else if(n == 1) {

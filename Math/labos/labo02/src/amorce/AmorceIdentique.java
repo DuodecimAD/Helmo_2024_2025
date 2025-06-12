@@ -16,7 +16,6 @@ public class AmorceIdentique {
      */
     public static boolean amorceIdentiqueIteratif(String chaine, String amorce) {
     	
-    	// DONE
     	if(chaine == null || amorce == null) {
     		throw new IllegalArgumentException();
     	} else if(chaine.length() < amorce.length()) {
@@ -45,7 +44,6 @@ public class AmorceIdentique {
      */
     public static boolean amorceIdentiqueRecursif(String chaine, String amorce) {
     	
-    	// DONE
     	if(chaine == null || amorce == null) {
     		throw new IllegalArgumentException();
     	} else if(chaine.length() < amorce.length()) {

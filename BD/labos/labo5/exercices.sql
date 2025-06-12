@@ -1,3 +1,25 @@
+1.
+ALTER TABLE alerter
+ADD CONSTRAINT statut
+CHECK (statut IN ('L', 'N'));
+
+2.
+ALTER TABLE offre
+ADD CONSTRAINT chk_date_remise
+CHECK (date_remise <= SYSDATE);
+
+3.
+ALTER TABLE bien
+ADD CONSTRAINT chk_pieces_min
+CHECK (nb_sdb >= 1 AND nb_pav >= 1);
+
+4.
+CREATE OR REPLACE VIEW vue_bien_4_facades
+AS
+SELECT * FROM bien
+WHERE nb_facades = 4
+WITH CHECK OPTION CONSTRAINT chk_vue_facades;
+
 6.
 CREATE VIEW contact_candidat
 AS

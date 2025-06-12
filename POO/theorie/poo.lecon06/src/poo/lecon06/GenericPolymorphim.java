@@ -13,7 +13,6 @@ public class GenericPolymorphim {
 			LocalDate.of(2001, 11, 9),LocalDate.of(1974, 01, 02)
 		);
 		
-		//DONE exercice 6.2 genericPolymorphism
 		// Pattern n'implemente pas la methode Comparable<Pattern> => refus compilateur
 //		var list = List.of(
 //				  Pattern.compile("[a-zA-Z_][0-9a-zA-Z_]+"), 

@@ -2,6 +2,8 @@ package algo.labo03.remplacement;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class RemplacementMot {
 
@@ -25,36 +27,24 @@ public class RemplacementMot {
 			Map.entry("appetit", " anniversaire")
 			);
 
-public String switchWords(String str) {
+	public String switchWords(String str) {
 		
 		if(!str.contains("«")) {
 			return str;
 		}
 		
-		String wordFound = str.matches("« ?[a-zA-Z-]+ ?»");
-//		String[] array = str.split("« ?| ?»");
+		Pattern pattern = Pattern.compile("« ?([a-zA-Z-]+) ?»");
+        Matcher matcher = pattern.matcher(str);
+
+        matcher.find();
+        String matchedWord = matcher.group(1).toLowerCase();
+        System.out.println("Found: " + matchedWord);
+
+        str = matcher.replaceFirst(dictionnaire.get(matchedWord));
+        
 		
-		String newString = "";
-		
-//		for (int i = 0; i < array.length; i++) {
-//			if(array[i].charAt(0) == '«' && array[i].charAt(array.length-1) == '»') {
-//				array[i] = array[i].substring(1, array[i].length()-1).trim();
-//				array[i] = dictionnaire.get(array[i]);
-//			}
-//			newString += array[i];
-//		}
-		
-		for (int i = 0; i < array.length; i++) {
-			if(array[i].charAt(0) != ' ' && array[i].charAt(array[i].length()-1) != ' ') {
-				array[i] = dictionnaire.get(array[i]);
-			}
-			newString += array[i];
-		}
-		
-		System.out.println(newString);
-		
-		return switchWords(newString);
-		
+		System.out.println(str);
+		return switchWords(str);
 	}
 	
 	
@@ -90,8 +80,8 @@ public String switchWords(String str) {
 		
 		RemplacementMot test = new RemplacementMot();
 		
-		String str = "Bonjour « madame », avez vous du « coca-cola » ? Il m'en faut pour jouer à « magic »";
-//		String str = "Bon«jour»« Maman »";
+//		String str = "Bonjour « madame », avez vous du « coca-cola » ? Il m'en faut pour jouer à « magic »";
+		String str = "Bon«jour»« Maman »";
 		
 		test.switchWords(str);
 

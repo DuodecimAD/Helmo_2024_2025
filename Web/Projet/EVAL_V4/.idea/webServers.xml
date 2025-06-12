@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="dc0964d0-5655-41aa-96d3-9d1266f4d847" name="HELmo Panoramix" url="192.168.132.203/q240183">
+        <fileTransfer rootFolder="/home/q240183/public_html" accessType="SFTP" host="192.168.132.203" port="22" sshConfigId="43f9c642-4d08-411c-9a3a-9448a1329366" sshConfig="q240183@192.168.132.203 -p 22">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -3,7 +3,7 @@ package poo.lecon07;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FakeYouTubeSubscriber implements YouTubeSubscriber {
+public class FakeYouTubeSubscriber implements YoutubeSubscriber {
 
 	private List<String> videos = new ArrayList<String>();
 	

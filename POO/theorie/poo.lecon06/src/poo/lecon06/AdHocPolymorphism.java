@@ -4,8 +4,6 @@ import java.time.LocalDate;
 import java.util.*;
 
 public class AdHocPolymorphism {
-
-	// DONE exercice 6.1 adHocPolymorphism
 	
 	public static void main(String[] args) {
 		LocalDate[] array = 

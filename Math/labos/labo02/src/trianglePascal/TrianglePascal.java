@@ -48,7 +48,6 @@ public class TrianglePascal {
      */
     public static int coefficientPascalRecursif(int ligne, int colonne) {
     	
-    	// TODO
     	if(ligne < 0 || colonne < 0 || colonne > ligne) {
 			throw new IllegalArgumentException();
 		} else if(colonne  == 0 || colonne == ligne){
@@ -62,7 +61,7 @@ public class TrianglePascal {
     public static void main(String[] args) {
 		
 		System.out.println("Triangle de Pascal - version itérative");
-		// TODO
+
 		for (int i = 0; i < 17; i++) {
 			for (int j = 0; j < i; j++) {
 				System.out.printf("%5d ", coefficientPascalIteratif(i, j));
@@ -73,7 +72,7 @@ public class TrianglePascal {
 		System.out.println();
 		
 		System.out.println("Triangle de Pascal - version récursive");
-		// TODO
+
 		for (int i = 0; i < 17; i++) {
 			for (int j = 0; j < i; j++) {
 				System.out.printf("%5d ", coefficientPascalRecursif(i, j));

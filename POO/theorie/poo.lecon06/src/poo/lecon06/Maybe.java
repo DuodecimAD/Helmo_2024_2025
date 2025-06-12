@@ -2,7 +2,6 @@ package poo.lecon06;
 
 import java.util.NoSuchElementException;
 
-// DONE exercice 6.3 définir générique
 
 public class Maybe<TValue> {
 	

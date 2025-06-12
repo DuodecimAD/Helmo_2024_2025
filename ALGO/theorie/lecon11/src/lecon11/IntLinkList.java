@@ -127,7 +127,7 @@ public class IntLinkList {
 	 * @param pos une position
 	 */
 	public void remove(int pos) {
-		// TODO
+
 		if(pos == 0) {
 			Node toRemove = start;
 			start = start.next;

@@ -44,7 +44,7 @@ public class Wizard implements Comparable<Wizard> {
 			return this.getName().compareTo(other.getName());
 		}
 		
-		return result; // DONE: Fakenews !
+		return result; 
 	}
 
 	

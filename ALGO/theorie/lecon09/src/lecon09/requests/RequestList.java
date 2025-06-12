@@ -31,7 +31,6 @@ public class RequestList {
 	}
 	
 	public void cancelLast() {
-		// DONE Deque obligatoire
 		requests.removeLast();
 	}
 	

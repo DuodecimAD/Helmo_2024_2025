@@ -17,9 +17,14 @@ import java.util.Map;
  */
 public class Stock implements Iterable<Wine> {
 	
-	private static final List<WineBottle> NO_BOTTLE = List.of(); 
+	private static final int VOLUME_750 = 750;
+
+	private static final List<WineBottle> NO_BOTTLE = List.of();
+
+	private static double turnover = 0; 
 	
-	private final Map<Wine, List<WineBottle>> bottlesPerWine;	
+	private final Map<Wine, List<WineBottle>> bottlesPerWine;
+
 	
 	/**
 	 * Construit un stock sur base d'une collection de bouteilles.
@@ -106,6 +111,7 @@ public class Stock implements Iterable<Wine> {
 		}
 		if (bottleMatch != null) {
 			bottleMatch.drink(WineBottle.GLASS_VOL_ML);
+			turnover += Consumption.GLASS.computePurchasePrice(bottleMatch.getPurchasePrice());
 		}
 	}
 	
@@ -124,7 +130,8 @@ public class Stock implements Iterable<Wine> {
 			}
 		}
 		if(bottleMatch != null) {
-			bottleMatch.volumeInMl = 0;
+			bottleMatch.drink(WineBottle.BOTTLE_VOL_ML);
+			turnover += Consumption.BOTTLE.computePurchasePrice(bottleMatch.getPurchasePrice());
 		}
 	}
 
@@ -140,5 +147,25 @@ public class Stock implements Iterable<Wine> {
 	public double purchasePrice(Wine wine) {
 		var bottles = bottlesPerWine.getOrDefault(wine, NO_BOTTLE);
 		return (bottles.size() > 0) ? bottles.getFirst().getPurchasePrice() : 0.0;
+	}
+
+	/**
+	 * 
+	 * @return
+	 */
+	public double getStockValue() {
+		double value = 0.0;
+		for(var bottlesList : bottlesPerWine.values()) {
+			for(var bottle : bottlesList) {
+				if(bottle.getVolumeInMl() == VOLUME_750) {
+					value += bottle.getPurchasePrice();
+				}
+			}
+		}
+		return value;
+	}
+
+	public double getTurnOver() {
+		return turnover;
 	}
 }

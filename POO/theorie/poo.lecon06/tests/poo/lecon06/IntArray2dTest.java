@@ -68,7 +68,7 @@ class IntArray2dTest {
 	}
 	
 	@Test
-	void SetsWithNegativeIndex() { // FIXME
+	void SetsWithNegativeIndex() { // FIXME check solution
 		var array = new BetterIntArray2d(IntArray2d.MAX_INDEX, IntArray2d.MAX_INDEX);
 		var randomIndex = (int)(Math.random()*IntArray2d.MAX_INDEX);
 		
@@ -95,7 +95,7 @@ class IntArray2dTest {
 	}
 	
 	@Test
-	void GetsWithNegativeIndex() { // TODO
+	void GetsWithNegativeIndex() { 
 		var array = new BetterIntArray2d(IntArray2d.MAX_INDEX, IntArray2d.MAX_INDEX);
 		var randomIndex = (int)(Math.random()*IntArray2d.MAX_INDEX);
 		
@@ -139,13 +139,13 @@ class IntArray2dTest {
 		
 		var actual = array.toString();
 		var expected = 
-"""
-[
- [0,0,0]
- [0,0,0]
-]				
-""".strip();
-		
+						"""
+						[
+						 [0,0,0]
+						 [0,0,0]
+						]				
+						""".strip();
+								
 		assertEquals(expected, actual);
 	}
 }

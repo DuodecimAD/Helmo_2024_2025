@@ -25,11 +25,11 @@ public class Tris {
 		int m;
 
 		while(depart < fin) {
-			m = depart + (fin - depart) / 2; // TODO: Pourquoi pas (fin + depart) / 2 ? pour éviter overflow tableau quand nb trop grand et devienne -
+			m = depart + (fin - depart) / 2; // Pourquoi pas (fin + depart) / 2 ? pour éviter overflow tableau quand nb trop grand et devienne -
 			if (tableau[m] > valeur) {
 				fin = m;
 			} else {
-				depart = m + 1; // TODO: Pourquoi pas depart = m ? m est exclu
+				depart = m + 1; // Pourquoi pas depart = m ? m est exclu
 			}
 		}
 		return depart;
@@ -52,11 +52,11 @@ public class Tris {
 	 * @param tableau un tableau d'entiers.
 	 */
 	public static void insertionSort(int[] tableau) {
-		for(int i = 1 /* INIT */; i < tableau.length/* GUARDIEN */; ++i) { // TODO: pourquoi i = 1 ?  car element 0 est seul et déjà trié 
+		for(int i = 1 /* INIT */; i < tableau.length/* GUARDIEN */; ++i) { // pourquoi i = 1 ?  car element 0 est seul et déjà trié 
 			// INIT : 1 op O(1), GUARDIEN : 1 op O(tableau.length)
 			int tmp = tableau[i]; // 2 op, O(1)
 			int pos = positionInsersion(tableau, i, tmp);														 // O(log n)
-			System.arraycopy(tableau, pos, tableau, pos + 1, i - pos); // TODO: justifier la valeur des paramètres (i - pos) le nbr d'element à bouger
+			System.arraycopy(tableau, pos, tableau, pos + 1, i - pos); // justifier la valeur des paramètres (i - pos) le nbr d'element à bouger
 						// i op => O(length) = O(i-pos) => pire des cas i - pos = i=> tri oredre décroissant 54321
 			tableau[pos] = tmp;																					 // O(1)
 		}/* FIN 0 op*/
@@ -66,14 +66,6 @@ public class Tris {
 	}
 	
 	private static int positionInsersion(final Wizard[] tableau, final int longueur, final Wizard valeur) {
-
-//		for (int i = 0; i < longueur; i++) {
-//			if(tableau[i].compareTo(valeur) >= 0) {
-//				return i;
-//			}
-//		}
-//		return longueur; // FIXME C'est faux !
-		
 		
 		int depart = 0;
 		int fin = longueur;
@@ -126,9 +118,7 @@ public class Tris {
 	 * @param destination un tableau dont la taille est égale à la somme des éléments de comptage.
 	 */
 	private static void repartirValeurs(final int[] comptage, final byte[] destination) {
-		
-		// FIXME : Exercice 3
-		
+				
 		int k = 0;
 		for (int i = 0; i < comptage.length; i++) {
 			for (int j = 0; j < comptage[i]; j++) {

@@ -42,8 +42,12 @@ public class WineBottle {
 		return volumeInMl;
 	}
 
-
-	private boolean hasEnoughVolume(int glassVolMl) {
+	/**
+	 * 
+	 * @param glassVolMl
+	 * @return
+	 */
+	public boolean hasEnoughVolume(int glassVolMl) {
 		return this.volumeInMl >= glassVolMl;
 	}
 

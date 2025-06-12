@@ -19,7 +19,6 @@ public class TermesSuite {
      */
     public static long termesSuiteIteratif(int n) {
     	
-    	// DONE
     	if(n <= 0 ) {
     		throw new IllegalArgumentException("erreur");
     	} 
@@ -41,7 +40,6 @@ public class TermesSuite {
      */
     public static long termesSuiteRecursif(int n) {
     	    	
-    	// DONE
     	if(n <= 0 ) {
     		throw new IllegalArgumentException("erreur");
     	} else if (n == 1) {

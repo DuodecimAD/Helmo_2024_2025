@@ -45,8 +45,12 @@ public final class BarControlPanelSupervisor {
 		view.setStockTable(stockTable);
 	}
 
+	/**
+	 * 
+	 * @return
+	 */
 	private String[][] buildStockTable() {
-		String[][] table = new String[stock.size()][3]; // the table has winesCount lines
+		String[][] table = new String[stock.size()+2][3]; // the table has winesCount lines
 		int row = 0;
 		for (Wine wine : stock) {
 			table[row][0] = wine.toString();
@@ -56,8 +60,24 @@ public final class BarControlPanelSupervisor {
 			table[row][2] = String.format("%d", stock.countVolumeInMl(wine));
 			++row;
 		}
+		
+		addValeurStockToTable(table, row);
+		++row;
+		addChiffreAffaireToTable(table, row);
 
 		return table;
+	}
+
+	private void addChiffreAffaireToTable(String[][] table, int row) {
+		table[row][0] = "Chiffre d'affaire";
+		table[row][1] = String.format("%4.1f €", stock.getTurnOver());
+		table[row][2] = "";
+	}
+
+	private void addValeurStockToTable(String[][] table, int row) {
+		table[row][0] = "Valeur du stock";
+		table[row][1] = String.format("%4.1f €", stock.getStockValue());
+		table[row][2] = "";
 	}
 
 	/**
@@ -81,7 +101,7 @@ public final class BarControlPanelSupervisor {
 				++count;
 			} else {
 				view.showErrorMessage("La réserve est vide ou il n'y a plus de bouteilles pour ce vin");
-				count = quantity;
+				count = quantity + 1;
 			}
 		}
 		
@@ -111,7 +131,7 @@ public final class BarControlPanelSupervisor {
 				count++;
 			} else {
 				view.showErrorMessage("La réserve est vide ou il n'y a plus de bouteilles pour ce vin");
-				count = quantity; // Pour sortir de la boucle;
+				count = quantity + 1 ; // Pour sortir de la boucle;
 			}
 		}
 
