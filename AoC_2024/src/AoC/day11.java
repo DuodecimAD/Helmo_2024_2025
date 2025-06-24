@@ -3,14 +3,22 @@ package AoC;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.math.BigInteger;
+import java.nio.ByteOrder;
+import java.nio.MappedByteBuffer;
+import java.nio.channels.FileChannel;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.StringJoiner;
 
 public class day11 {
@@ -19,21 +27,22 @@ public class day11 {
 		
 		//part1();
 		//part2();
-		part2AfterSomeHelmoPooClasses();
+		//part2AfterSomeHelmoPooClasses();
+		//System.out.println();
+		part2After1YearAtHelmo();
+
 
 	}
 	
 	public static void part1() {
 		
-		
-		
-		ArrayList<Long> a = new ArrayList<>(Arrays.asList(3279L, 998884L, 1832781L, 517L, 8L, 18864L, 28L, 0L));
+		List<Long> a = new ArrayList<>(Arrays.asList(3279L, 998884L, 1832781L, 517L, 8L, 18864L, 28L, 0L));
 		
 		//System.out.println(a);
 		
-		for (int i = 0; i < 75; i++) {
+		for (int i = 0; i < 40; i++) {
 			long startTime = System.nanoTime();
-			ArrayList<Long> b = new ArrayList<Long>();
+			List<Long> b = new ArrayList<Long>();
 			
 			for (int j = 0; j < a.size(); j++) {
 				
@@ -53,12 +62,16 @@ public class day11 {
 				}
 				
 			}
-			//System.out.println(b);
+			
 			a = b;
-			System.out.println(i + "size : " + a.size());
-			long endTime = System.nanoTime(); 
-	        long duration = (endTime - startTime) / 1000000;
-	        System.out.println("Duration : " + duration/1000.00 + " sec ");
+//			System.out.println(a);
+			if(i > 35) {
+				System.out.println(i + " size : " + a.size());
+				long endTime = System.nanoTime(); 
+		        long duration = (endTime - startTime) / 1000000;
+		        System.out.println("Duration : " + duration/1000.00 + " sec ");
+			}
+			
 		}
 		
 	}
@@ -198,5 +211,65 @@ public class day11 {
 		}
 
 	}
+	
+	// managed to improve the performance and lower the time but still reaching max heap at iteration 40
+	public static void part2After1YearAtHelmo() {
+		
+		List<Long> array = new ArrayList<>(Arrays.asList(3279L, 998884L, 1832781L, 517L, 8L, 18864L, 28L, 0L));
+		
+		Map<Long, long[]> map = new HashMap<>();
+		map.put(0L, new long[]{1L});
+		
+		for (int i = 0; i < 75; i++) {
+			long startTime = System.nanoTime();
+			List<Long> newArray = new ArrayList<>(array.size() * 2);
+						
+			for (int j = 0; j < array.size(); j++) {
+				
+				long nbr = array.get(j);
+
+				if(!map.containsKey((Long) nbr)) {
+					int l = digitCount(nbr);
+					if (l % 2 == 1) {
+						map.put(nbr, new long[] {nbr * 2024});
+					} else if (l % 2 == 0) {
+						long[] split = splitInHalf(nbr, l);
+						map.put(nbr, split);	
+					} else {
+						System.out.println("Error");
+					}
+				}
+				
+				for (Long s : map.get(nbr)) {
+					newArray.add(s);
+				}
+				
+			}
+
+			array = newArray;
+//			System.out.println(array);
+			if(i > 35) {
+//				System.out.println(i + " size : " + array.size());
+				System.out.println(i + " size : " + array.size());
+				long endTime = System.nanoTime(); 
+		        long duration = (endTime - startTime) / 1000000;
+		        System.out.println("Duration : " + duration/1000.00 + " sec ");
+			}
+		}
+
+	}
+	
+	private static long[] splitInHalf(long number, int length) {
+	    int mid = length / 2;
+	    long pow = (long) Math.pow(10, length - mid);
+	    long first = number / pow;
+	    long second = number % pow;
+	    return new long[] {first, second};
+	}
+	
+	private static int digitCount(long n) {
+	    return (n == 0) ? 1 : (int) Math.log10(n < 0 ? -n : n) + 1;
+	}
+	
 
 }

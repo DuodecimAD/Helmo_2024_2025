@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && (isset($_POST["ajouter"]) || isset(
         } elseif ($_FILES["image"]["size"] > 2000000 ) {
             $errorMessage = "L'image est trop grande. 2MB max.";
         }
-    } elseif($objet->getObjet($oid) && $objet->getBid() !== $_SESSION['user']['bid']) {
+    } elseif(isset($_POST["modifier"]) && $objet->getObjet($oid) && $objet->getObjet($oid) && $objet->getBid() !== $_SESSION['user']['bid']) {
         $error = "<p>Vous essayez de supprimer un objet qui ne vous appartient pas ! tsk tsk </p><img src='https://media.tenor.com/7IGdrM1gJCoAAAAM/dym-tsk-tsk.gif' alt='tsk tsk'>";
     }
 
